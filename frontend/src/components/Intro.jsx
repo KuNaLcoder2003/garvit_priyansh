@@ -8,7 +8,7 @@ import {
     useEffect,
 } from 'react'
 
-import obj from "../../public/assets/data"
+import obj from "../data"
 import { motion } from 'framer-motion'
 // const items = [{
 //     name: 'Composers',
