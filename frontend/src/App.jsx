@@ -3,7 +3,7 @@
 
 import { ChevronDown } from 'lucide-react';
 import './App.css'
-import obj from './assets/data.js'
+import obj from '../public/assets/data.js'
 import { useEffect, useRef, useState } from 'react';
 import Navbar from './components/Navbar.jsx';
 import HeroSection from './components/HeroSection.jsx';
