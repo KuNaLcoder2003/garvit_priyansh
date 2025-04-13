@@ -10,12 +10,11 @@ import {
 
 import obj from "../assets/data"
 import { motion } from 'framer-motion'
-import { Flag } from 'lucide-react'
-const items = [{
-    name: 'Composers',
-    quote: 'jhdgunkdfiowqknfodfkndj mdwuvmds vjidsnvjsdvm sidkmnq9qewkjipsdjkv',
-    title: 'dhfiodj'
-}]
+// const items = [{
+//     name: 'Composers',
+//     quote: 'jhdgunkdfiowqknfodfkndj mdwuvmds vjidsnvjsdvm sidkmnq9qewkjipsdjkv',
+//     title: 'dhfiodj'
+// }]
 const Intro = () => {
     return (
         <div id='about' className='w-full h-[200px] p-2'>

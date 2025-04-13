@@ -1,11 +1,10 @@
 
 
-import { Facebook, Mail, Music, Phone, Twitter, Youtube } from 'lucide-react'
-import { ChevronDown, Flag } from 'lucide-react';
+
+import { ChevronDown } from 'lucide-react';
 import './App.css'
 import obj from './assets/data.js'
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
 import HeroSection from './components/HeroSection.jsx';
 import Heroimage from './components/Heroimage.jsx';
