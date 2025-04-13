@@ -15,14 +15,31 @@ import { motion } from 'framer-motion'
 //     quote: 'jhdgunkdfiowqknfodfkndj mdwuvmds vjidsnvjsdvm sidkmnq9qewkjipsdjkv',
 //     title: 'dhfiodj'
 // }]
+const data = [
+    {
+        img: obj.saxophone,
+        head: "Musicians",
+        text: "We express what words can't - through rythm , harmony and soul",
+    },
+    {
+        img: obj.guitar,
+        head: "Composers",
+        text: "We craft melodies from emotions, turning moments into music"
+    },
+    {
+        img: obj.bagpipes,
+        head: "Artists",
+        text: "We create experiences that stay with you - far beyond the last note"
+    }
+]
 const Intro = () => {
     return (
-        <div id='about' className='w-full h-[200px] p-2'>
+        <div id='about' className='w-full h-auto p-2'>
 
-            <h2 className='p-2 text-3xl font-bold text-slate-600 relative top-8'>Garvit - Priyansh are </h2>
+            <h2 className='text-3xl font-bold text-slate-600 relative top-8 w-[50%] left-[85px]'>Garvit - Priyansh are </h2>
 
 
-            <div className='flex w-full items-center gap-[10px] justify-center overflow-hidden flex-wrap'>
+            {/* <div className='flex w-full items-center gap-[10px] justify-center overflow-hidden flex-wrap'>
 
                 <CardContainer className="inter-var">
                     <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
@@ -121,7 +138,7 @@ const Intro = () => {
                         </div>
                     </CardBody>
                 </CardContainer>
-                
+
                 <CardContainer className="inter-var">
                     <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                         <CardItem
@@ -172,7 +189,11 @@ const Intro = () => {
                 </CardContainer>
 
 
-            </div>
+            </div> */}
+
+            <InfiniteMovingCards items={data} className='w-[100%] m-auto p-4 mt-[2rem]' />
+
+
 
         </div>
     )
@@ -212,11 +233,11 @@ export const CardContainer = ({
     return (
         <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
             <motion.div
-            initial={{opacity : 0 , y: 20}}
-            whileInView={{opacity : 1 , y : 0}}
-            exit={{opacity : 0 , y : -20}}
-            viewport={{once : false}}
-            transition={{delay : 0.2 , duration : 2}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                viewport={{ once: false }}
+                transition={{ delay: 0.2, duration: 1 }}
                 className={cn(
                     "py-20 flex items-center justify-center",
                     containerClassName
@@ -371,7 +392,7 @@ const InfiniteMovingCards = ({
         <div
             ref={containerRef}
             className={cn(
-                "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+                "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]",
                 className,
             )}
         >
@@ -385,15 +406,26 @@ const InfiniteMovingCards = ({
             >
                 {items.map((item, idx) => (
                     <li
-                        className="relative w-[200px] shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-blue-600 px-8 py-6 md:w-[200px] dark:border-zinc-700"
-                        key={item.name}
+                        className={`relative min-w-[320px] min-h-[250px] shrink-0 rounded-2xl border border-b-0 border-zinc-200 px-8 py-6 md:w-[200px] dark:border-zinc-700 ${
+                            idx == 0 ? 'bg-indigo-500 text-white' : 
+                            idx == 1 ? 'bg-rose-100 text-black' : 
+                            idx == 2 ? 'bg-orange-100 text-black' : ''
+                        }`}
+                        key={`${idx}_${item.head}`}
                     >
-                        <blockquote>
-                            <div
-                                aria-hidden="true"
-                                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                            ></div>
-                            <span className="relative z-20 text-sm text-white leading-[1.6] font-normal text-white font-bold">
+
+                        <div
+                            aria-hidden="true"
+                            className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+                        ></div>
+                        <div className='flex flex-col p-4 w-[100%] gap-[2rem]'>
+                            <img src={item.img} width={"20%"} />
+                            <div className='flex flex-col gap-[1rem]'>
+                                <h2 className='font-bold'>{item.head}</h2>
+                                <p className={`${idx == 0 ? 'text-white' : 'text-gray-700'} font-semibold`}>{item.text}</p>
+                            </div>
+                        </div>
+                        {/* <span className="relative z-20 text-sm text-white leading-[1.6] font-normal text-white font-bold">
                                 {item.quote}
                             </span>
                             <div className="relative z-20 mt-6 flex flex-row items-center">
@@ -405,8 +437,8 @@ const InfiniteMovingCards = ({
                                         {item.title}
                                     </span>
                                 </span>
-                            </div>
-                        </blockquote>
+                            </div> */}
+
                     </li>
                 ))}
             </ul>
@@ -415,3 +447,106 @@ const InfiniteMovingCards = ({
 };
 
 export default Intro;
+
+// import React, { useEffect, useRef, useState } from "react";
+// import cn from "classnames"; // assuming you're using classnames library
+
+// const InfiniteMovingCards = ({
+//   items,
+//   direction = "left",
+//   speed = "fast",
+//   pauseOnHover = true,
+//   className,
+// }) => {
+//   const containerRef = useRef(null);
+//   const scrollerRef = useRef(null);
+//   const [start, setStart] = useState(false);
+
+//   useEffect(() => {
+//     if (!scrollerRef.current) return;
+
+//     const scroller = scrollerRef.current;
+//     const hasDuplicated = scroller.getAttribute("data-duplicated");
+
+//     if (!hasDuplicated) {
+//       const itemsToDuplicate = Array.from(scroller.children);
+//       itemsToDuplicate.forEach((item) => {
+//         const clone = item.cloneNode(true);
+//         scroller.appendChild(clone);
+//       });
+//       scroller.setAttribute("data-duplicated", "true");
+//     }
+
+//     applyStyles();
+//     setStart(true);
+
+//     return () => {
+//       // Optional: cleanup duplicated nodes if needed
+//     };
+//   }, []);
+
+//   const applyStyles = () => {
+//     if (!containerRef.current) return;
+
+//     containerRef.current.style.setProperty(
+//       "--animation-direction",
+//       direction === "left" ? "forwards" : "reverse"
+//     );
+
+//     let duration = "40s";
+//     if (speed === "fast") duration = "20s";
+//     else if (speed === "slow") duration = "80s";
+
+//     containerRef.current.style.setProperty("--animation-duration", duration);
+//   };
+
+//   return (
+//     <div
+//       ref={containerRef}
+//       className={cn(
+//         "scroller relative z-20 max-w-7xl overflow-hidden will-change-transform",
+//         "[mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]",
+//         className
+//       )}
+//     >
+//       <ul
+//         ref={scrollerRef}
+//         className={cn(
+//           "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+//           start && "animate-scroll",
+//           pauseOnHover && "hover:[animation-play-state:paused]"
+//         )}
+//       >
+//         {items.map((item, idx) => (
+//           <li
+//             key={`${idx}_${item.head}`}
+//             className={cn(
+//               "relative min-w-[320px] min-h-[250px] shrink-0 rounded-2xl border border-b-0 px-8 py-6 md:w-[200px]",
+//               "will-change-transform",
+//               idx === 0 && "bg-indigo-500 text-white border-zinc-200 dark:border-zinc-700",
+//               idx === 1 && "bg-rose-100 text-black border-zinc-200 dark:border-zinc-700",
+//               idx === 2 && "bg-orange-100 text-black border-zinc-200 dark:border-zinc-700"
+//             )}
+//           >
+//             <div
+//               aria-hidden="true"
+//               className="pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+//             />
+//             <div className="flex flex-col p-4 w-full gap-8">
+//               <img src={item.img} alt="" width="20%" />
+//               <div className="flex flex-col gap-4">
+//                 <h2 className="font-bold">{item.head}</h2>
+//                 <p className={cn("font-semibold", idx === 0 ? "text-white" : "text-gray-700")}>
+//                   {item.text}
+//                 </p>
+//               </div>
+//             </div>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+
+

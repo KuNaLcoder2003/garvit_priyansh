@@ -1,6 +1,3 @@
-
-
-
 import { ChevronDown } from 'lucide-react';
 import './App.css'
 import obj from './data.js';
@@ -9,6 +6,10 @@ import Navbar from './components/Navbar.jsx';
 import HeroSection from './components/HeroSection.jsx';
 import Heroimage from './components/Heroimage.jsx';
 import Intro from './components/Intro.jsx';
+import ImageAbt from './components/ImageAbt.jsx';
+import Releases from './components/Releases.jsx';
+import { HeroParallax } from './components/HeroParallax.jsx';
+import { BandMembers } from './components/BandMembers.jsx';
 
 function App() {
   const heroRef = useRef(null);
@@ -61,7 +62,14 @@ function App() {
           <ChevronDown className="w-6 h-6" />
         </a>
       </div>
-      <Intro/>
+      <Intro />
+
+      <ImageAbt/>
+
+      <Releases/>
+
+      <HeroParallax/>
+      <BandMembers/>
     </>
 
   );

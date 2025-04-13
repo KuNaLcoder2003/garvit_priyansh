@@ -9,7 +9,7 @@ const Heroimage = ({obj}) => {
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -60 }}
         viewport={{ once: false }}
-        transition={{ duration: 2, delay: 0.2 }}
+        transition={{ duration: 1.2, delay: 0.2 }}
         src={obj.img}
         alt="Bottom image"
         className="w-full object-cover"

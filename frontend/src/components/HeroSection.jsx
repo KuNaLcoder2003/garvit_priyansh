@@ -33,7 +33,7 @@ const HeroSection = ({obj}) => {
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, x: -20 }}
           viewport={{ once: false }}
-          transition={{ duration: 1.3, delay: 2.3 }}
+          transition={{ duration: 0.7, delay: 2.3 }}
           src={src}
           alt={`Icon ${idx + 1}`}
           className={`hidden lg:inline absolute w-6 md:w-8 ${
