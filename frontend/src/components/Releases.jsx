@@ -15,14 +15,14 @@ const Releases = () => {
                             translateZ="50"
                             className="text-xl font-bold text-neutral-600 dark:text-white"
                         >
-                            Composers
+                            Sanware
                         </CardItem>
                         <CardItem
                             as="p"
                             translateZ="60"
                             className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                         >
-                            We Love composing music
+                            Song 1
                         </CardItem>
                         <CardItem
                             translateZ="100"
@@ -64,14 +64,14 @@ const Releases = () => {
                             translateZ="50"
                             className="text-xl font-bold text-neutral-600 dark:text-white"
                         >
-                            Singers
+                            Tu Azma
                         </CardItem>
                         <CardItem
                             as="p"
                             translateZ="60"
                             className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                         >
-                            We sing pretty good
+                            Song 2
                         </CardItem>
                         <CardItem
                             translateZ="100"
@@ -113,14 +113,14 @@ const Releases = () => {
                             translateZ="50"
                             className="text-xl font-bold text-neutral-600 dark:text-white"
                         >
-                            Artists
+                            Kagaz
                         </CardItem>
                         <CardItem
                             as="p"
                             translateZ="60"
                             className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                         >
-                            Crafting good music is our art
+                            Song 3
                         </CardItem>
                         <CardItem
                             translateZ="100"

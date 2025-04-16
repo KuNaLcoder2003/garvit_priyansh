@@ -10,6 +10,19 @@ import ImageAbt from './components/ImageAbt.jsx';
 import Releases from './components/Releases.jsx';
 import { HeroParallax } from './components/HeroParallax.jsx';
 import { BandMembers } from './components/BandMembers.jsx';
+import Images from './components/Images.jsx';
+import Events from './components/Events.jsx';
+import Services from './components/Services.jsx';
+import SpotifyArtistPage from './components/SpotifyArtistPage.jsx';
+import { WobbleCardDemo } from './components/WobbleCardDemo.jsx';
+import Index from './components/Index.jsx';
+// import VideoSection from './components/VideoSection.jsx';
+import AboutUs from './components/AboutUs.jsx';
+import ContactSection from './components/ContactSection.jsx';
+import { Timeline } from './components/TimeLine.jsx';
+import { TimelineDemo } from './components/TimeLineDemo.jsx';
+import Footer from './components/Footer.jsx';
+import { NavbarDemo } from './components/NavbarDemo.jsx';
 
 function App() {
   const heroRef = useRef(null);
@@ -53,7 +66,8 @@ function App() {
         </div>
 
         <div className="mt-4 flex flex-col gap-4 md:gap-6 z-10 w-full">
-          <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          {/* <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
+          <NavbarDemo/>
           <HeroSection obj={obj} />
           <Heroimage obj={obj} />
         </div>
@@ -64,12 +78,25 @@ function App() {
       </div>
       <Intro />
 
-      <ImageAbt/>
+      <ImageAbt />
 
-      <Releases/>
+      <Releases />
 
-      <HeroParallax/>
-      <BandMembers/>
+
+
+      {/* 
+
+      <HeroParallax />
+      <BandMembers /> */}
+      {/* <Services/> */}
+      <SpotifyArtistPage />
+      {/* <WobbleCardDemo/> */}
+      {/* <Index /> */}
+      {/* <Events /> */}
+      <TimelineDemo/>
+      <ContactSection/>
+      <AboutUs/>
+      <Footer/>
     </>
 
   );

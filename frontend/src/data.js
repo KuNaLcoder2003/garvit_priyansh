@@ -17,6 +17,9 @@ const priyansh = "/assets/priyansh_solo.jpg"
 const mithilesh = "/assets/mithilesh_solo.jpg"
 const nikhil = "/assets/nikhil_solo.jpg"
 const aditya = "/assets/aditya_solo.jpg"
+const img_abt = "assets/gp_images_bg.jpg"
+const rel = "/assets/gp_releases.jpg";
+const spotify = "/assets/spotify-removebg-preview.png"
 
 const obj = {
     img : img ,
@@ -38,6 +41,9 @@ const obj = {
     mithilesh : mithilesh ,
     nikhil : nikhil,
     aditya : aditya,
+    img_abt : img_abt,
+    rel : rel,
+    spotify : spotify
 
 }
 
