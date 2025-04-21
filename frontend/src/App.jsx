@@ -24,7 +24,32 @@ import { TimelineDemo } from './components/TimeLineDemo.jsx';
 import Footer from './components/Footer.jsx';
 import { NavbarDemo } from './components/NavbarDemo.jsx';
 
+import { Routes, Route } from "react-router-dom"
+import Gallery from './pages/Gallery.jsx';
+import MusicPage from './pages/MusicPage.jsx';
+import { MarqueeDemo } from './components/MarqueeDemo.jsx';
+import EventsPage from './pages/EventsPage.jsx';
+
 function App() {
+
+
+  return (
+
+    <Routes>
+
+      <Route path='/' element={<LandingPage />} />
+      <Route path='/gallery' element={<Gallery />} />
+      <Route path='/music' element={<MusicPage />} />
+      <Route path='/events' element = {<EventsPage/>} />
+
+
+    </Routes>
+
+
+  );
+}
+
+const LandingPage = () => {
   const heroRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -53,9 +78,7 @@ function App() {
       document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
-
   return (
-
     <>
       <div ref={heroRef} className="relative bg-gradient-to-b from-[#0f1729] to-black min-h-screen flex flex-col gap-6 md:gap-8 justify-start overflow-hidden w-full">
 
@@ -67,7 +90,7 @@ function App() {
 
         <div className="mt-4 flex flex-col gap-4 md:gap-6 z-10 w-full">
           {/* <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
-          <NavbarDemo/>
+          <NavbarDemo />
           <HeroSection obj={obj} />
           <Heroimage obj={obj} />
         </div>
@@ -82,24 +105,26 @@ function App() {
 
       <Releases />
 
+      {/* <MarqueeDemo /> */}
+
 
 
       {/* 
 
-      <HeroParallax />
-      <BandMembers /> */}
+<HeroParallax />
+<BandMembers /> */}
       {/* <Services/> */}
       <SpotifyArtistPage />
+      <HeroParallax />
       {/* <WobbleCardDemo/> */}
       {/* <Index /> */}
       {/* <Events /> */}
-      <TimelineDemo/>
-      <ContactSection/>
-      <AboutUs/>
-      <Footer/>
+      <TimelineDemo />
+      <ContactSection />
+      <AboutUs />
+      <Footer />
     </>
-
-  );
+  )
 }
 
 export default App;

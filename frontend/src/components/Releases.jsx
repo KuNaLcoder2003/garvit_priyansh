@@ -2,11 +2,18 @@ import React, { useRef, useContext, useEffect, useState, createContext } from 'r
 import obj from '../data'
 import { motion } from 'framer-motion'
 import { cn } from '../utils'
+import { useNavigate } from 'react-router-dom'
 
 const Releases = () => {
+    const navigate = useNavigate();
     return (
         <div className='flex flex-col justify-center '>
-            <h2 className='text-3xl font-bold text-slate-600 relative top-8 w-[50%] left-[85px]'>Our Releases </h2>
+            <div className='w-full flex justify-between p-2 items-center relative top-8 '>
+
+            <h2 className='text-3xl font-bold text-slate-600 relative w-[50%] left-[85px]'>Our Releases </h2>
+            <p className='px-4 text-lg font-bold cursor-pointer h-auto' onClick={()=>navigate('/music')}>See More</p>
+
+            </div>
             <div className='flex w-full items-center gap-[10px] justify-center overflow-hidden flex-wrap'>
 
                 <CardContainer className="inter-var">

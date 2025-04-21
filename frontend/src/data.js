@@ -20,7 +20,9 @@ const aditya = "/assets/aditya_solo.jpg"
 const img_abt = "assets/gp_images_bg.jpg"
 const rel = "/assets/gp_releases.jpg";
 const spotify = "/assets/spotify-removebg-preview.png"
-
+const img_11 = "/assets/gp_12.jpg";
+const img_12 = "/assets/gp_13.jpg";
+const img_13 = "/assets/gp_14.jpeg";
 const obj = {
     img : img ,
     text :  text,
@@ -43,7 +45,10 @@ const obj = {
     aditya : aditya,
     img_abt : img_abt,
     rel : rel,
-    spotify : spotify
+    spotify : spotify,
+    img_11 : img_11,
+    img_12 : img_12,
+    img_13 : img_13,
 
 }
 

@@ -1,4 +1,5 @@
 "use client";
+import { useNavigate } from "react-router-dom";
 import {
   Navbar,
   NavBody,
@@ -16,19 +17,24 @@ export function NavbarDemo() {
   const navItems = [
     {
       name: "About Us",
-      link: "#features",
+      link: "/aboutUs",
     },
     {
       name: "Gallery",
-      link: "#pricing",
+      link: "/gallery",
     },
     {
       name: "Our band",
-      link: "#contact",
+      link: "/bandInfo",
     },
+    {
+      name: "Releases",
+      link: '/music'
+    }
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="relative w-full">
@@ -38,7 +44,9 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Events</NavbarButton>
+            <div className="" onClick={()=>navigate('/events')}>
+              <NavbarButton variant="secondary">Events</NavbarButton>
+            </div>
             <NavbarButton variant="primary">Book a call</NavbarButton>
           </div>
         </NavBody>
@@ -54,13 +62,12 @@ export function NavbarDemo() {
 
           <MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
             {navItems.map((item, idx) => (
-              <a
+              <p
                 key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => { setIsMobileMenuOpen(false); navigate(`${item.link}`) }}
                 className="relative text-neutral-600 dark:text-neutral-300">
                 <span className="block">{item.name}</span>
-              </a>
+              </p>
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton

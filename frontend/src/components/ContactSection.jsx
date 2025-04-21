@@ -7,7 +7,7 @@ const ContactSection = () => {
       {/* Left Image Section */}
       <div className="md:w-1/2 w-full h-1/2 md:h-full">
         <img
-          src={obj.gpImg} // Replace with actual image path
+          src={obj.gpImg1} // Replace with actual image path
           alt="Contact"
           className="object-cover w-full h-full"
         />
