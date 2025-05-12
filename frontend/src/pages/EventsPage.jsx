@@ -13,6 +13,7 @@ const EventsPage = () => {
       <h1 className='text-4xl font-bold text-center p-2 mt-[4rem]'>Our Events</h1>
       <LayoutGridDemo />
       <DummyContent />
+      
       <Footer />
 
     </div>

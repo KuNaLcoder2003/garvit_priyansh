@@ -27,8 +27,13 @@ import { NavbarDemo } from './components/NavbarDemo.jsx';
 import { Routes, Route } from "react-router-dom"
 import Gallery from './pages/Gallery.jsx';
 import MusicPage from './pages/MusicPage.jsx';
-import { MarqueeDemo } from './components/MarqueeDemo.jsx';
+
 import EventsPage from './pages/EventsPage.jsx';
+import BandPage from './pages/BandPage.jsx';
+import { TextReveal } from './components/TextReveal.jsx';
+import Reveal from './components/Reveal.jsx';
+import { InfiniteMovingCardsDemo } from './components/MovingCardsDemo.jsx';
+import { Iphone15ProDemo } from './components/IPhoneDemo.jsx';
 
 function App() {
 
@@ -40,7 +45,8 @@ function App() {
       <Route path='/' element={<LandingPage />} />
       <Route path='/gallery' element={<Gallery />} />
       <Route path='/music' element={<MusicPage />} />
-      <Route path='/events' element = {<EventsPage/>} />
+      <Route path='/events' element={<EventsPage />} />
+      <Route path='/bandInfo' element={<BandPage />} />
 
 
     </Routes>
@@ -103,25 +109,34 @@ const LandingPage = () => {
 
       <ImageAbt />
 
-      <Releases />
+      
+      <Releases/>
 
-      {/* <MarqueeDemo /> */}
+   
+      
 
 
 
-      {/* 
 
-<HeroParallax />
-<BandMembers /> */}
-      {/* <Services/> */}
+      
+      
       <SpotifyArtistPage />
       <HeroParallax />
-      {/* <WobbleCardDemo/> */}
-      {/* <Index /> */}
-      {/* <Events /> */}
+
+      
       <TimelineDemo />
+      <div className='w-[100%] flex flex-col p-4 mt-14 lg:p-0'>
+
+        <div className='w-[85%] self-center'>
+          <h2 className='text-3xl font-bold text-slate-600 relative w-[30%] 3xl:text-center'>Here's what people say about us</h2>
+        </div>
+
+        <InfiniteMovingCardsDemo/>
+
+      </div>
       <ContactSection />
       <AboutUs />
+      <Iphone15ProDemo/>
       <Footer />
     </>
   )

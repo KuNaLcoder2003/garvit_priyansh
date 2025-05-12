@@ -3,9 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import obj from "../data";
-
-import { GoogleGeminiEffect } from "./GoogleGeminiEffect";
-
+import { BrandScroll } from "./BandScroll";
 const testimonials = [{
     src: obj.garvit,
     name: "Garvit", designation: "Singer", quote: "Hello everyone, I am Garvit Soni, a passionate and an aspiring singer, composer and music producer from the beautiful city of lakes named Udaipur. I have diligently pursued diploma in Classical music from Maharaja Sayajirao University based in Baroda.  I have recently started working on originals which you can find on my YouTube channel.Living my passion, with just one thought in my head to go miles before I sleep. "
@@ -58,10 +56,11 @@ export const BandMembers = ({
         <>
 
 
-            <GoogleGeminiEffect className={'w-[full] h-[400vh]'} />
+            <BrandScroll/>
 
             <div
-                className="flex-1 mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+                className="flex-1 mt-[-100px] mx-auto max-w-sm px-4 py-20 flex flex-col gap-8 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+                    <h1 className="text-4xl font-bold">Meet the band</h1>
                 <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
                     <div>
                         <div className="relative h-80 w-full text-white">

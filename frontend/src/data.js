@@ -23,6 +23,11 @@ const spotify = "/assets/spotify-removebg-preview.png"
 const img_11 = "/assets/gp_12.jpg";
 const img_12 = "/assets/gp_13.jpg";
 const img_13 = "/assets/gp_14.jpeg";
+const gp_spotify = '/assets/gp_spotify.jpg'
+const kini = '/assets/kini.mp3'
+const raat = '/assets/raat.mp3'
+const loveya = '/assets/loveya.mp3'
+const water = '/assets/Water.mp3'
 const obj = {
     img : img ,
     text :  text,
@@ -49,6 +54,8 @@ const obj = {
     img_11 : img_11,
     img_12 : img_12,
     img_13 : img_13,
+    gp_spotify : gp_spotify,
+    songs : [kini , raat , loveya , water]
 
 }
 

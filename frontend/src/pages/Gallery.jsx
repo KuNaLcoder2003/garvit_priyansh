@@ -3,13 +3,26 @@ import { NavbarDemo } from '../components/NavbarDemo'
 import obj from '../data'
 import Footer from '../components/Footer'
 import { FocusCardsDemo } from '../components/FocusCards'
+import { BentoGridDemo } from '../components/Bento'
 
 
 const Gallery = () => {
   return (
-    <div className=''>
+    <div className='w-[100%]'>
       <NavbarDemo />
       <DummyContent />
+      <div className='w-[100%]'>
+        <h1>Mumbai</h1>
+        <DummyContent/>
+      </div>
+      <div className='w-[100%]'>
+        <h1>Bangalore</h1>
+        <DummyContent/>
+      </div>
+      <div className='w-[100%]'>
+        <h1>Delhi</h1>
+        <DummyContent/>
+      </div>
       <Footer />
     </div>
   )
@@ -112,10 +125,10 @@ export const DummyContent = () => {
         </div>
       </div>
 
-      <div className='flex flex-col gap-[3rem] mt-[5rem] items-baseline mb-[3rem]'>
+      {/* <div className='flex flex-col gap-[3rem] mt-[5rem] items-baseline mb-[3rem]'>
         <h1 className='self-center text-4xl font-bold'>From our tours and shows</h1>
         <FocusCardsDemo />
-      </div>
+      </div> */}
     </>
   );
 };
