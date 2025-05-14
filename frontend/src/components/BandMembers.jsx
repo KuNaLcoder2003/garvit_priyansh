@@ -56,11 +56,11 @@ export const BandMembers = ({
         <>
 
 
-            <BrandScroll/>
+            
 
             <div
                 className="flex-1 mt-[-100px] mx-auto max-w-sm px-4 py-20 flex flex-col gap-8 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
-                    <h1 className="text-4xl font-bold">Meet the band</h1>
+                    
                 <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
                     <div>
                         <div className="relative h-80 w-full text-white">

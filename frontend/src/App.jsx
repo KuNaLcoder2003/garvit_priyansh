@@ -34,6 +34,7 @@ import { TextReveal } from './components/TextReveal.jsx';
 import Reveal from './components/Reveal.jsx';
 import { InfiniteMovingCardsDemo } from './components/MovingCardsDemo.jsx';
 import { Iphone15ProDemo } from './components/IPhoneDemo.jsx';
+import { Morphing } from './components/Morphing.jsx';
 
 function App() {
 
@@ -128,7 +129,7 @@ const LandingPage = () => {
       <div className='w-[100%] flex flex-col p-4 mt-14 lg:p-0'>
 
         <div className='w-[85%] self-center'>
-          <h2 className='text-3xl font-bold text-slate-600 relative w-[30%] 3xl:text-center'>Here's what people say about us</h2>
+          <h2 className='text-2xl md:text-3xl w-[90%] md:w-[60%]  font-bold text-slate-600 relative lg:w-[30%] 3xl:text-center'>Here's what people say about us</h2>
         </div>
 
         <InfiniteMovingCardsDemo/>
@@ -137,6 +138,7 @@ const LandingPage = () => {
       <ContactSection />
       <AboutUs />
       <Iphone15ProDemo/>
+      {/* <Morphing/> */}
       <Footer />
     </>
   )

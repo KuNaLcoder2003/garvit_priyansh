@@ -10,30 +10,30 @@ const Gallery = () => {
   return (
     <div className='w-[100%]'>
       <NavbarDemo />
-      <DummyContent />
+      <DummyContent heading={' Here are some moments from our music journey'} />
       <div className='w-[100%]'>
-        <h1>Mumbai</h1>
-        <DummyContent/>
+        
+        <DummyContent heading={'Mumbai'} />
       </div>
       <div className='w-[100%]'>
-        <h1>Bangalore</h1>
-        <DummyContent/>
+       
+        <DummyContent heading={'Bangalore'} />
       </div>
       <div className='w-[100%]'>
-        <h1>Delhi</h1>
-        <DummyContent/>
+     
+        <DummyContent heading={'Delhi'}/>
       </div>
       <Footer />
     </div>
   )
 }
 
-export const DummyContent = () => {
+export const DummyContent = ({heading}) => {
   return (
     <>
       <div className="container mx-auto p-8 pt-24">
         <h1 className="mb-4 text-center text-3xl font-bold">
-          Here are some moments from our music journey
+         {heading}
         </h1>
         {/* <p className="mb-10 text-center text-sm text-zinc-500">
         For demo purpose we have kept the position as{" "}

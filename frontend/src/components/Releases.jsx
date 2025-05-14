@@ -10,7 +10,7 @@ const tracks = [
   {
     id : 1 , 
     thumbnail : 'https://i.scdn.co/image/ab67616d00001e02a25647c61efcb54ad1d1707f' , 
-    song : 'Tu Azma' , 
+    song : 'Tu Aazma' , 
     release : '2023',
     duration : '3:18',
     plays : '2,701,338',

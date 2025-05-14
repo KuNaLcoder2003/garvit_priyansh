@@ -68,7 +68,7 @@ const Events = () => {
         <div className='w-[95%] m-auto py-10'>
 
             <p className='text-2xl md:text-4xl font-bold text-purple-600 mb-10 text-center md:text-left md:pl-20'>
-                Upcoming Events
+                Past Events
             </p>
 
             <div className='flex flex-col gap-10 items-center'>
