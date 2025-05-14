@@ -50,7 +50,7 @@ const BandPage = () => {
                   initial={{ opacity: 0, y: -40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0.3, y: 40 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  transition={{ duration: 0.6, ease: "easeIn" }}
                   key={`${index}_${testimonial.name}`} className='flex flex-col md:flex-row gap-10 lg:gap-12 bg-neutral-100 items-center md:items-align rounded-xl shadow-xl p-4'>
                   <div className='w-[280px] h-[280px]'>
                     <img
