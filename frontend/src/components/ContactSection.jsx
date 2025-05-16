@@ -17,12 +17,12 @@ const ContactSection = () => {
       <div className="md:w-1/2 w-full bg-black text-white flex flex-col justify-center items-center p-10 space-y-10 text-center">
         <div>
           <h2 className="text-2xl font-bold mb-2">GET IN TOUCH</h2>
-          <p className="text-lg">youremail@example.com</p>
+          <p className="text-lg">garvitpriyansh@gmail.com</p>
         </div>
 
         <div>
           <h2 className="text-2xl font-bold mb-2">BUSINESS/ENQUIRIES</h2>
-          <p className="text-lg">business@example.com</p>
+          <p className="text-lg">garvitpriyansh@gmail.com</p>
         </div>
       </div>
     </div>

@@ -69,27 +69,27 @@ export const InfiniteMovingCards = ({
         )}>
         {items.map((item, idx) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px]"
             key={item.name}>
             <blockquote>
               <div
                 aria-hidden="true"
                 className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"></div>
               <span
-                className="relative z-20 text-sm leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">
+                className="relative z-20 text-sm leading-[1.6] font-normal text-neutral-800">
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center ">
                 <span className="flex flex gap-2">
 
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQLwDqDwd2JfzifvfBTFT8I7iKFFevcedYg&s" className="w-10 h-10 rounded-full object-cover" />
+                  
                   <div className="flex flex-col items-baseline">
                   <span
-                      className="text-sm leading-[1.6] text-indigo-600 dark:text-gray-400 font-bold">
+                      className="text-sm leading-[1.6] text-indigo-600  font-bold">
                       {item.name}
                     </span>
                     <span
-                      className="text-sm leading-[1.6]  text-neutral-500 dark:text-gray-400 font-normal">
+                      className="text-sm leading-[1.6]  text-neutral-500  font-normal">
                       {item.title}
                     </span>
                    

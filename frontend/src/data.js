@@ -82,6 +82,7 @@ const goa_3 = '/assets/goa/goa_3.jpeg'
 
 const image_one = '/assets/image_1.jpeg'
 const image_two = '/assets/image_2.jpeg'
+const video = '/assets/gp_video.mp4'
 
 const logo = '/assets/colored-logo.png'
 
@@ -165,7 +166,8 @@ const obj = {
     gp_spotify : gp_spotify,
     songs : [  kkr , mere_ranjhna , sanaware, tu_aazma],
     test_1 : test_1,
-    logo : logo
+    logo : logo , 
+    video
 
 }
 

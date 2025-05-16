@@ -7,36 +7,42 @@ import { PlayCircle, BarChart2, Clock, Heart, Music } from 'lucide-react'
 import MusicReleaseCards from './MusicReleaseCards'
 
 const tracks = [
-  {
-    id : 1 , 
-    thumbnail : 'https://i.scdn.co/image/ab67616d00001e02a25647c61efcb54ad1d1707f' , 
-    song : 'Tu Aazma' , 
-    release : '2023',
-    duration : '3:18',
-    plays : '2,701,338',
-    gradient : 'bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent'
-  } , 
-  {
-    id : 2 , 
-    thumbnail : 'https://i.scdn.co/image/ab67616d00001e02784eaefd0ecc1e7f55b396a3' , 
-    song : 'Kagaz' , 
-    release : '2024',
-    duration : '3:33',
-    plays : '437,386',
-    gradient : 'bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent'
+   {
+            id: 1,
+            thumbnail: 'https://i.scdn.co/image/ab67616d00001e02a25647c61efcb54ad1d1707f',
+            song: 'Tu Aazma',
+            release: '2023',
+            duration: '3:18',
+            plays: '2,701,338',
+            gradient: 'bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent',
+            gradientBtn : 'bg-gradient-to-r from-neutral-300 to-stone-400' , 
+            link : 'https://open.spotify.com/track/38CMq8hlI8zIzGbENBBG1P'
+        },
+        {
+            id: 2,
+            thumbnail: 'https://i.scdn.co/image/ab67616d00001e02784eaefd0ecc1e7f55b396a3',
+            song: 'Kagaz',
+            release: '2024',
+            duration: '3:33',
+            plays: '437,386',
+            gradient: 'bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent',
+            gradientBtn : 'bg-gradient-to-r from-amber-500 to-pink-500',
+            link : 'https://open.spotify.com/track/7kF41c0FB7LJMs6ilrWqt2'
 
 
-  } , 
-  {
-    id : 3 , 
-    thumbnail : 'https://i.scdn.co/image/ab67616d00001e02950868d5c0b9741965239d31' , 
-    song : 'Sanware' , 
-    release : '2022',
-    duration : '4:57',
-    plays : '2,457,166',
-    gradient : 'bg-gradient-to-r from-emerald-500 to-emerald-900 bg-clip-text text-transparent'
+        },
+        {
+            id: 3,
+            thumbnail: 'https://i.scdn.co/image/ab67616d00001e02950868d5c0b9741965239d31',
+            song: 'Sanware',
+            release: '2022',
+            duration: '4:57',
+            plays: '2,457,166',
+            gradient: 'bg-gradient-to-r from-emerald-500 to-emerald-900 bg-clip-text text-transparent',
+            gradientBtn : 'bg-gradient-to-r from-emerald-500 to-emerald-900' , 
+            link : 'https://open.spotify.com/track/4qBHgJWDMuWhgWwp2FFz7z'
 
-  }
+        }
   
 ]
 const Releases = () => {

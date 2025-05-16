@@ -212,11 +212,11 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    description: "Garvit - Priyansh",
+    title: "Tu Aazma",
+    src: "https://i.scdn.co/image/ab67616d00001e02a25647c61efcb54ad1d1707f",
     ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://open.spotify.com/track/38CMq8hlI8zIzGbENBBG1P",
     content: () => {
       return (
         <p>Lana Del Rey, an iconic American singer-songwriter, is celebrated for

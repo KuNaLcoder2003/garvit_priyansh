@@ -5,7 +5,7 @@ export function Iphone15Pro({
   height = 882,
   src,
   videoSrc,
-  ...props
+  isMuted
 }) {
   return (
     <svg
