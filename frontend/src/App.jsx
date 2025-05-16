@@ -2,24 +2,20 @@ import { ChevronDown } from 'lucide-react';
 import './App.css'
 import obj from './data.js';
 import { useEffect, useRef, useState } from 'react';
-import Navbar from './components/Navbar.jsx';
+
 import HeroSection from './components/HeroSection.jsx';
 import Heroimage from './components/Heroimage.jsx';
 import Intro from './components/Intro.jsx';
 import ImageAbt from './components/ImageAbt.jsx';
 import Releases from './components/Releases.jsx';
 import { HeroParallax } from './components/HeroParallax.jsx';
-import { BandMembers } from './components/BandMembers.jsx';
-import Images from './components/Images.jsx';
-import Events from './components/Events.jsx';
-import Services from './components/Services.jsx';
+
 import SpotifyArtistPage from './components/SpotifyArtistPage.jsx';
-import { WobbleCardDemo } from './components/WobbleCardDemo.jsx';
-import Index from './components/Index.jsx';
-// import VideoSection from './components/VideoSection.jsx';
+
+
 import AboutUs from './components/AboutUs.jsx';
 import ContactSection from './components/ContactSection.jsx';
-import { Timeline } from './components/TimeLine.jsx';
+
 import { TimelineDemo } from './components/TimeLineDemo.jsx';
 import Footer from './components/Footer.jsx';
 import { NavbarDemo } from './components/NavbarDemo.jsx';
@@ -30,11 +26,11 @@ import MusicPage from './pages/MusicPage.jsx';
 
 import EventsPage from './pages/EventsPage.jsx';
 import BandPage from './pages/BandPage.jsx';
-import { TextReveal } from './components/TextReveal.jsx';
-import Reveal from './components/Reveal.jsx';
+
 import { InfiniteMovingCardsDemo } from './components/MovingCardsDemo.jsx';
 import { Iphone15ProDemo } from './components/IPhoneDemo.jsx';
-import { Morphing } from './components/Morphing.jsx';
+import Testimonials from './pages/Testimonials.jsx';
+
 
 function App() {
 
@@ -42,14 +38,12 @@ function App() {
   return (
 
     <Routes>
-
       <Route path='/' element={<LandingPage />} />
       <Route path='/gallery' element={<Gallery />} />
       <Route path='/music' element={<MusicPage />} />
       <Route path='/events' element={<EventsPage />} />
       <Route path='/bandInfo' element={<BandPage />} />
-
-
+      <Route path='/testimomials' element={<Testimonials/>} />
     </Routes>
 
 
@@ -94,51 +88,32 @@ const LandingPage = () => {
           <div className="layer absolute bottom-20 md:bottom-40 right-10 md:right-20 w-32 md:w-64 h-32 md:h-64 rounded-full bg-purple-500/10 dark:bg-purple-500/20" data-speed="3" />
           <div className="layer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-2xl md:max-w-4xl lg:max-w-6xl aspect-square rounded-full bg-gradient-to-r from-primary/5 to-accent/5 dark:from-primary/10 dark:to-accent/10 blur-3xl" data-speed="1" />
         </div>
-
         <div className="mt-4 flex flex-col gap-4 md:gap-6 z-10 w-full">
           {/* <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
           <NavbarDemo />
           <HeroSection obj={obj} />
           <Heroimage obj={obj} />
         </div>
-        <a href="#about" className="flex flex-col items-center absolute z-10 bottom-0 left-1/2 text-black-600 font-bold">
+        {/* <a href="#about" className="flex flex-col items-center absolute z-10 bottom-0 left-1/2 text-black-600 font-bold">
           <span className="text-sm mb-2">Scroll Down</span>
           <ChevronDown className="w-6 h-6" />
-        </a>
+        </a> */}
       </div>
       <Intro />
-
-      <ImageAbt />
-
-      
+      <ImageAbt />      
       <Releases/>
-
-   
-      
-
-
-
-
-      
-      
       <SpotifyArtistPage />
       <HeroParallax />
-
-      
       <TimelineDemo />
       <div className='w-[100%] flex flex-col p-4 mt-14 lg:p-0'>
-
         <div className='w-[85%] self-center'>
           <h2 className='text-2xl md:text-3xl w-[90%] md:w-[60%]  font-bold text-slate-600 relative lg:w-[30%] 3xl:text-center'>Here's what people say about us</h2>
         </div>
-
         <InfiniteMovingCardsDemo/>
-
       </div>
       <ContactSection />
       <AboutUs />
       <Iphone15ProDemo/>
-      {/* <Morphing/> */}
       <Footer />
     </>
   )

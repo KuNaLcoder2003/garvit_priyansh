@@ -8,6 +8,8 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import obj from "../data";
+import { useNavigate } from "react-router-dom";
 
 
 export const Navbar = ({
@@ -189,17 +191,18 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
+  const navigate = useNavigate()
   return (
-    <a
-      href="#"
+    <p
+      onClick={()=>navigate('/')}
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
-        src="https://assets.aceternity.com/logo-dark.png"
+        src={obj.logo}
         alt="logo"
-        width={30}
-        height={30} />
-      <span className="font-medium text-black ">Garvit - Priyansh</span>
-    </a>
+        width={70}
+        height={70} className="scale-[2.5] mx-5" />
+      {/* <span className="font-medium text-black">Garvit - Priyansh</span> */}
+    </p>
   );
 };
 

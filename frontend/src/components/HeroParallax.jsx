@@ -1,9 +1,9 @@
 
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
-import obj from "../data";
+import obj, { images } from "../data";
 
-const products = [{link : obj.gpImg1 } , {link : obj.gpImg1} , {link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1} ,{link : obj.gpImg1}  ]
+const products = [{link : images.img1 } , {link : obj.gpImg1} , {link : images.img2} ,{link : obj.band} ,{link : images.img3} ,{link : obj.gpImg} ,{link : images.img4} ,{link : obj.img_11} ,{link : images.img5} ,{link : obj.img_12} ,{link : images.img5} ,{link : obj.img_13} ,{link : images.img6} ,{link : images.img7} ,{link : images.img8}  ]
 
 export const HeroParallax = () => {
   const firstRow = products.slice(0, 5);

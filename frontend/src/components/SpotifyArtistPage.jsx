@@ -25,7 +25,7 @@ export default function SpotifyArtistPage() {
   const [index , setIndex] = useState(0) 
 
   const popularTracks = [
-    { id: 1, title: 'Kagaz', plays: '1,812,421', img: 'https://i.scdn.co/image/ab67616d00001e02784eaefd0ecc1e7f55b396a3' },
+    { id: 1, title: 'Khwabon ke Rang', plays: '1,812,421', img: 'https://i.scdn.co/image/ab67616d00001e02ea6f4ed5ed91d1d4d4a17cc6' },
     { id: 2, title: 'Mere Ranjhana', plays: '1,812,421', img: 'https://i.scdn.co/image/ab67616d00001e029affc02726dab6d69ab76db4' },
     { id: 3, title: 'Sanware', plays: '1,812,421', img: 'https://i.scdn.co/image/ab67616d00001e02950868d5c0b9741965239d31' },
     { id: 4, title: 'Tu Azma', plays: '1,812,421', img: 'https://i.scdn.co/image/ab67616d00001e02a25647c61efcb54ad1d1707f' },
@@ -74,20 +74,7 @@ export default function SpotifyArtistPage() {
     // return () => audioRef.current.removeEventListener('timeupdate' , handleTimeUpdate)
   }, [])
 
-  // useEffect(()=>{
-
-  //   handlePause();
-  //   const playNew = async() => {
-  //     await audioRef.current.load()
-  //     handlePlay();
-  //   }
-  //   playNew();
-
-  //   audioRef.current.addEventListener('loadmetadata' , handleTimeUpdate)
-  //   return ()=> audioRef.current.removeEventListener('loadmetadata' , handleTimeUpdate)
-
-  
-  // } , [index])
+ 
 
   function handleSongChange(index){
     setIndex(index)
@@ -151,7 +138,7 @@ export default function SpotifyArtistPage() {
           <h2 className="text-xl font-bold mb-4 text-center">Popular</h2>
           <div className="flex flex-col gap-3 mb-6">
             {popularTracks.map((track, index) => (
-              <div onClick={()=>handleSongChange(index)} key={track.id} className="flex items-center justify-between hover:bg-white/10 transition p-3 rounded">
+              <div onClick={()=>handleSongChange(index)} key={track.id} className="cursor-pointer flex items-center justify-between hover:bg-white/10 transition p-3 rounded">
                 <div className="flex items-center gap-4">
                   <img src={track.img} alt={track.title} className="w-12 h-12 rounded object-cover" />
                   <span className="font-medium">{track.title}</span>
