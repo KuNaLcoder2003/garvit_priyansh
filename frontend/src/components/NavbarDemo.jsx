@@ -71,7 +71,7 @@ export function NavbarDemo() {
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {setIsMobileMenuOpen(false) ; navigate('/events') }}
                 variant="primary"
                 className="w-full">
                 Events

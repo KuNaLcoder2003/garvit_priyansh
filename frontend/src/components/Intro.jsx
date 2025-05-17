@@ -255,7 +255,7 @@ const InfiniteMovingCards = ({
             >
                 {items.map((item, idx) => (
                     <li
-                        className={`relative w-[200px] min-h-[250px] shrink-0 rounded-2xl border border-b-0 border-zinc-200 px-8 py-6 md:w-[320px] dark:border-zinc-700 ${
+                        className={`relative w-[200px] min-h-[250px] shrink-0 rounded-2xl px-8 py-6 md:w-[320px] dark:border-zinc-700 ${
                             idx == 0 ? 'bg-indigo-500 text-white' : 
                             idx == 1 ? 'bg-rose-100 text-black' : 
                             idx == 2 ? 'bg-orange-100 text-black' : ''

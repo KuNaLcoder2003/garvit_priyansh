@@ -3,7 +3,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import obj from "../data";
-import { BrandScroll } from "./BandScroll";
 const testimonials = [{
     src: obj.garvit,
     name: "Garvit", designation: "Singer", quote: "Hello everyone, I am Garvit Soni, a passionate and an aspiring singer, composer and music producer from the beautiful city of lakes named Udaipur. I have diligently pursued diploma in Classical music from Maharaja Sayajirao University based in Baroda.  I have recently started working on originals which you can find on my YouTube channel.Living my passion, with just one thought in my head to go miles before I sleep. "
@@ -22,17 +21,54 @@ const testimonials = [{
     name: "Aditya", designation: "Band member", quote: "Priyansh Srivastava is an indie singer songwriter from Faridabad, Haryana. He’s a mechanical engineering graduate and has a junior diploma , a senior diploma and a Prabhakar (bachelors) degree in Indian classical vocal music from Prayag Sangeet Samiti , Allahabad. He expresses his emotions through his music and hopes that YOU connect with it❤️ Priyansh Srivastava"
 }]
 
+const teamMembers = [{
+    name: "Garvit Soni",
+    role: "Singer",
+    bio: "Garvit Soni is a Udaipur-based music producer, composer, and singer known for blending soulful melodies with intricate production. With a Diploma in Indian Classical Music from Maharaja Sayajirao University, Baroda, his work reflects emotional depth and refined musicality. Garvit showcases his original compositions on YouTube, each infused with quiet intensity. Offstage, he finds joy in cricket, channeling creativity into all areas of life. His calm presence and artistic vision form the heart of the Garvit-Priyansh sound.",
+    
+    image: obj.garvit,
+},
+{
+    name: "Priyansh Shrivastav",
+    role: "Singer",
+    bio: "Priyansh Srivastava is an indie singer-songwriter and composer from Faridabad, Haryana, blending emotional storytelling with classical training. A Mechanical Engineering graduate, he holds a Junior Diploma, Senior Diploma, and Prabhakar in Indian classical vocals from Prayag Sangeet Samiti. His music explores themes of love, introspection, and spiritual depth. Beyond music, Priyansh enjoys football and cooking, often likening the art of songwriting to crafting a dish. With heartfelt vocals and a structured approach, he brings soul and discipline to the duo’s unique sound.",
+    
+    image: obj.priyansh,
+},
+{
+    name: "Mithilesh Panchal",
+    role: "Keyboardist",
+    bio: "Mithilesh began his musical journey with the piano, which laid the groundwork for his evolution into music production, composition, and arrangement. Known for blending emotion with technical precision, he plays a key role in crafting the band’s rich, cohesive sound both on stage and in the studio. His versatility and creative instincts continue to push the band’s musical boundaries forward.",
+    
+    image: obj.mithilesh,
+},
+{
+    name: "Aditya Kulkarni",
+    role: "Guitarist",
+    bio: "Aditya Kulkarni is a self-taught guitarist who also plays the keyboards. With a growing passion for music production, he primarily explores cinematic, Bollywood, and fusion styles. In his free time, he enjoys jamming, experimenting with new musical ideas, and discovering fresh sounds and plugins. For Aditya, music is a constant presence — whether he's listening, creating, or planning his next musical venture.",
+    
+    image: obj.aditya,
+} , 
+{
+    name: "Nikhil Bachute",
+    role: "Drumer",
+    bio: "Nikhil Bachute is a dynamic drummer with over eight years of experience and four years in the professional music scene. Renowned for his versatility and rhythmic precision, he has toured globally and performed with top artists like Sukhwinder Singh, Shaan, Gajendra Verma, and Ash King. He’s been part of major acts including Vinod B Project, Euphony, Sayli Kamble, Rohit Raut, and Saif Ali Khan’s live ensemble. A multi-time band competition winner, Nikhil also explored acting, appearing in Season 2 of Bandish Bandits. With a strong groove and evolving style, he continues to make his mark in the Indian music industry.",
+   
+    image: obj.nikhil,
+}
+]
+
 export const BandMembers = ({
     autoplay = false
 }) => {
     const [active, setActive] = useState(0);
 
     const handleNext = () => {
-        setActive((prev) => (prev + 1) % testimonials.length);
+        setActive((prev) => (prev + 1) % teamMembers.length);
     };
 
     const handlePrev = () => {
-        setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+        setActive((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
     };
 
     const isActive = (index) => {
@@ -65,9 +101,9 @@ export const BandMembers = ({
                     <div>
                         <div className="relative h-80 w-full text-white">
                             <AnimatePresence>
-                                {testimonials.map((testimonial, index) => (
+                                {teamMembers.map((member, index) => (
                                     <motion.div
-                                        key={testimonial.src}
+                                        key={member.image}
                                         initial={{
                                             opacity: 0,
                                             scale: 0.9,
@@ -81,7 +117,7 @@ export const BandMembers = ({
                                             rotate: isActive(index) ? 0 : randomRotateY(),
                                             zIndex: isActive(index)
                                                 ? 40
-                                                : testimonials.length + 2 - index,
+                                                : teamMembers.length + 2 - index,
                                             y: isActive(index) ? [0, -80, 0] : 0,
                                         }}
                                         exit={{
@@ -96,8 +132,8 @@ export const BandMembers = ({
                                         }}
                                         className="absolute inset-0 origin-bottom">
                                         <img
-                                            src={testimonial.src}
-                                            alt={testimonial.name}
+                                            src={member.image}
+                                            alt={member.name}
                                             width={500}
                                             height={500}
                                             draggable={false}
@@ -127,13 +163,13 @@ export const BandMembers = ({
                                 ease: "easeInOut",
                             }}>
                             <h3 className="text-2xl font-bold text-black ">
-                                {testimonials[active].name}
+                                {teamMembers[active].name}
                             </h3>
                             <p className="text-sm text-gray-500 ">
-                                {testimonials[active].designation}
+                                {teamMembers[active].role}
                             </p>
                             <motion.p className="mt-8 text-lg text-gray-500 ">
-                                {testimonials[active].quote.split(" ").map((word, index) => (
+                                {teamMembers[active].bio.split(" ").map((word, index) => (
                                     <motion.span
                                         key={index}
                                         initial={{

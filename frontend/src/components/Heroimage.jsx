@@ -63,7 +63,7 @@ const Heroimage = ({ obj }) => {
       className={`
         w-[250%] md:w-[170%] lg:w-[130%] xl:w-[110%] 2xl:w-[120%]
         absolute overflow-hidden
-        -bottom-56 md:-bottom-100 lg:-bottom-110 xl:-bottom-140 2xl:-bottom-140 3xl:top-5
+        -bottom-56 md:-bottom-100 lg:-bottom-110 xl:-bottom-140  2xl:-bottom-140 3xl:top-5
         left-1/2 transform -translate-x-1/2
       `}
     >

@@ -94,10 +94,7 @@ const LandingPage = () => {
           <HeroSection obj={obj} />
           <Heroimage obj={obj} />
         </div>
-        {/* <a href="#about" className="flex flex-col items-center absolute z-10 bottom-0 left-1/2 text-black-600 font-bold">
-          <span className="text-sm mb-2">Scroll Down</span>
-          <ChevronDown className="w-6 h-6" />
-        </a> */}
+       
       </div>
       <Intro />
       <ImageAbt />      
