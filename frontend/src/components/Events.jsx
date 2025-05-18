@@ -86,10 +86,10 @@ const EventCard = ({ event, isInView, ref, index }) => {
     return (
         <motion.div
             ref={ref}
-            initial={{ opacity: 0, y: -40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0.3, y: 20 }}
-            transition={{ duration: 0.6, ease : "linear" }}
+            // initial={{ opacity: 0, y: -40 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // exit={{ opacity: 0.3, y: 20 }}
+            // transition={{ duration: 0.6, ease : "linear" }}
             key={`${index}_${event.eventName}`} className='flex flex-col md:flex-row gap-14 lg:gap-16  items-center md:items-align rounded-xl shadow-2xl p-2 lg:p-4'>
             <div className='w-[280px] h-[280px]'>
                 <img
@@ -103,7 +103,7 @@ const EventCard = ({ event, isInView, ref, index }) => {
             <div className='flex flex-col gap-4 p-2'>
                 <div className=''>
                     <h2 className='text-3xl font-bold bg-clip-text text-transparent text-center lg:text-start' style={{ backgroundImage: "radial-gradient(98.0344% 98.0344% at 1.35135% 3.04878%, rgb(49, 46, 129) 0%, rgb(3, 7, 18) 100%)" }} >{event.eventName}</h2>
-                    <p className='text-md font-semibold text-center lg:text-start'>23/09/2024</p>
+                    {/* <p className='text-md font-semibold text-center lg:text-start'>23/09/2024</p> */}
                 </div>
 
                 {/* <p className='max-w-3xl'> {testimonial.quote} </p> */}
@@ -143,7 +143,7 @@ const EventCard = ({ event, isInView, ref, index }) => {
                     transition={{ duration: 0.4, ease: "easeIn", delay: 0.5 }}
                     className='flex items-center gap-4 w-[100%] lg:w-[50%] p-2'>
 
-                    <button className='font-semibold w-[90%] m-auto lg:m-0 lg:w-[30%] p-2 bg-green-500 text-white rounded-lg cursor-pointer'>Know more</button>
+                    {/* <button className='font-semibold w-[90%] m-auto lg:m-0 lg:w-[30%] p-2 bg-green-500 text-white rounded-lg cursor-pointer'>Know more</button> */}
                 </motion.div>
             </div>
 

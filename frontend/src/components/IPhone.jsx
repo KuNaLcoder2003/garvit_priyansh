@@ -66,9 +66,10 @@ export function Iphone15Pro({
           <video
             className="size-full overflow-hidden rounded-[55.75px] object-cover"
             src={videoSrc}
-            autoPlay
+            // autoPlay
             loop
             muted
+            controls
             playsInline
           />
         </foreignObject>

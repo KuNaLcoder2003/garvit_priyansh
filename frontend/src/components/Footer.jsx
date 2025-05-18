@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Left Section */}
         <div>
-          <h2 className="text-xl font-bold mb-2">GravitxPriyansh</h2>
+          <h2 className="text-xl font-bold mb-2">Gravit - Priyansh</h2>
           <p className="text-sm text-gray-300">
             Garvit–Priyansh is a singer-composer duo blending Indian classical influences with contemporary sounds, creating music that feels gentle, reflective, and effortless. They got signed with T-Series in February 2023 and have since crafted a distinctive sound led by emotion.
           </p>

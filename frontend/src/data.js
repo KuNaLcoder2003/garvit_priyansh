@@ -29,6 +29,7 @@ const sanaware = '/assets/sanaware.mp3'
 const kkr = '/assets/kkr.mp3'
 const mere_ranjhna = '/assets/mere_ranjhna.mp3'
 const test_1 = '/assets/ss-11.png'
+const bhav = '/assets/bhav.jpg'
 
 
 const gp1 = '/assets/gp_1.jpg'
@@ -167,7 +168,8 @@ const obj = {
     songs : [  kkr , mere_ranjhna , sanaware, tu_aazma],
     test_1 : test_1,
     logo : logo , 
-    video
+    video,
+    bhav
 
 }
 

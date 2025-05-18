@@ -229,6 +229,8 @@ export const NavbarButton = ({
   return (
     <Tag
       href={href || undefined}
+      target="_blank" 
+      rel="noopener noreferrer"
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}>
       {children}

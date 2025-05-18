@@ -47,7 +47,7 @@ export function NavbarDemo() {
             <div className="" onClick={()=>navigate('/events')}>
               <NavbarButton variant="secondary">Events</NavbarButton>
             </div>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            <NavbarButton variant="primary" href={'https://forms.gle/1t2aErfkLNEySDPUA'}>Book a call</NavbarButton>
           </div>
         </NavBody>
 
@@ -77,6 +77,7 @@ export function NavbarDemo() {
                 Events
               </NavbarButton>
               <NavbarButton
+              href={'https://forms.gle/1t2aErfkLNEySDPUA'}
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full">

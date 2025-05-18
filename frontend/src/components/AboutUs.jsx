@@ -1,6 +1,7 @@
 import React from 'react'
 import obj from "../data"
-import { Facebook, Twitter, Youtube } from 'lucide-react'
+import { Youtube, Instagram } from 'lucide-react'
+
 const AboutUs = () => {
   return (
     <div className="flex flex-col gap-20 mt-16 mb-8 px-4">
@@ -17,9 +18,8 @@ const AboutUs = () => {
           <div className="flex flex-col gap-3 items-center">
             <p className="font-bold text-xl text-center">GARVIT - PRIYANSH</p>
             <div className="flex items-center gap-4">
-              <Facebook size={20} />
-              <Twitter size={20} />
-              <Youtube size={20} />
+              <Instagram size={20} className='cursor-pointer' onClick={() => window.open('https://www.instagram.com/garvitxpriyansh/', '_blank')} />
+              <Youtube size={20} className='cursor-pointer' onClick={() => window.open('https://www.youtube.com/@GarvitPriyansh', '_blank')} />
             </div>
           </div>
         </div>
@@ -33,9 +33,8 @@ const AboutUs = () => {
           <div className="flex flex-col gap-3 items-center">
             <p className="font-bold text-xl text-center">GARVIT</p>
             <div className="flex items-center gap-4">
-              <Facebook size={20} />
-              <Twitter size={20} />
-              <Youtube size={20} />
+              <Instagram size={20} className='cursor-pointer' onClick={() => window.open('https://www.instagram.com/garvitsoni_/', '_blank')} />
+              <Youtube size={20} className='cursor-pointer' onClick={() => window.open('https://www.youtube.com/@GarvitPriyansh', '_blank')} />
             </div>
           </div>
         </div>
@@ -49,17 +48,11 @@ const AboutUs = () => {
           <div className="flex flex-col gap-3 items-center">
             <p className="font-bold text-xl text-center">PRIYANSH</p>
             <div className="flex items-center gap-4">
-              <Facebook size={20} />
-              <Twitter size={20} />
-              <Youtube size={20} />
+              <Instagram size={20} className='cursor-pointer' onClick={() => { window.open('https://www.instagram.com/priyanshhhsrivastava/', '_blank') }} />
+              <Youtube size={20} className='cursor-pointer' onClick={() => window.open('https://www.youtube.com/@GarvitPriyansh', '_blank')} />
             </div>
           </div>
         </div>
-
-
-
-
-
 
       </div>
     </div>

@@ -9,7 +9,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <p
-            className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            className="mb-8 text-xs font-normal text-neutral-800 md:text-sm ">
             Started our Tour with <span className="font-bold">Mumbai</span>
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -46,11 +46,11 @@ export function TimelineDemo() {
       content: (
         <div>
           <p
-            className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            className="mb-8 text-xs font-normal text-neutral-800 md:text-sm ">
            Next was the tech city <span className="font-bold">Bangalore</span>
           </p>
           <p
-            className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            className="mb-8 text-xs font-normal text-neutral-800 md:text-sm ">
             the tech city had a great taste
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -87,7 +87,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <p
-            className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            className="mb-4 text-xs font-normal text-neutral-800 md:text-sm ">
             Our last destination was the capital city <span className="font-bold">Delhi</span>
           </p>
           

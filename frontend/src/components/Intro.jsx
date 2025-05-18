@@ -255,7 +255,7 @@ const InfiniteMovingCards = ({
             >
                 {items.map((item, idx) => (
                     <li
-                        className={`relative w-[200px] min-h-[250px] shrink-0 rounded-2xl px-8 py-6 md:w-[320px] dark:border-zinc-700 ${
+                        className={`relative w-[220px] min-h-[250px] shrink-0 rounded-2xl px-8 py-6 md:w-[320px] dark:border-zinc-700 ${
                             idx == 0 ? 'bg-indigo-500 text-white' : 
                             idx == 1 ? 'bg-rose-100 text-black' : 
                             idx == 2 ? 'bg-orange-100 text-black' : ''
@@ -271,7 +271,7 @@ const InfiniteMovingCards = ({
                             <img src={item.img} width={"20%"} />
                             <div className='flex flex-col gap-[1rem]'>
                                 <h2 className='font-bold'>{item.head}</h2>
-                                <p className={`${idx == 0 ? 'text-white' : 'text-gray-700'} font-semibold`}>{item.text}</p>
+                                <p className={`${idx == 0 ? 'text-white' : 'text-gray-700'} font-semibold w-auto`}>{item.text}</p>
                             </div>
                         </div>
                         {/* <span className="relative z-20 text-sm text-white leading-[1.6] font-normal text-white font-bold">

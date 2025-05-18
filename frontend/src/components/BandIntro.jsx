@@ -44,6 +44,13 @@ const teamMembers = [{
     bio: "Nikhil Bachute is a dynamic drummer with over eight years of experience and four years in the professional music scene. Renowned for his versatility and rhythmic precision, he has toured globally and performed with top artists like Sukhwinder Singh, Shaan, Gajendra Verma, and Ash King. He’s been part of major acts including Vinod B Project, Euphony, Sayli Kamble, Rohit Raut, and Saif Ali Khan’s live ensemble. A multi-time band competition winner, Nikhil also explored acting, appearing in Season 2 of Bandish Bandits. With a strong groove and evolving style, he continues to make his mark in the Indian music industry.",
    
     image: obj.nikhil,
+} , 
+{
+    name : 'Bhav Narang',
+    role : 'Bassist',
+    bio : 'Bhav Narang is a Delhi-based multi-genre musician with roots in jazz and blues. A Grade 8 certified pianist, bassist, and guitarist from Trinity and Rockschool London, he has mentored over 80 students in the past four years. Bhav has performed alongside artists like Diljit Dosanjh, Tony Kakkar, and Suresh Wadkar, and was part of a Guinness World Record-winning band that composed for Amazon Prime’s The Forgotten Army. In 2023, he gained national recognition on India’s Got Talent Season 10 with Bombay Shor, honoring the legendary KK.',
+    image : obj.bhav
+
 }
 ]
 
@@ -74,13 +81,7 @@ const BandIntro = () => {
                                     <p className="text-gray-600 dark:text-gray-300 font-medium mb-3">{teamMember.role}</p>
                                     <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">{teamMember.bio}</p>
 
-                                    {/* <div className="grid grid-cols-2 gap-2 mb-4 w-full">
-                            {teamMember.skills.map((skill, i) => (
-                                <div key={i} className="px-3 py-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg text-xs text-indigo-700 dark:text-indigo-300 font-medium flex items-center justify-center">
-                                    {skill}
-                                </div>
-                            ))}
-                        </div> */}
+                                  
 
                                     <div className="flex gap-3">
                                         <div className="w-10 h-10 rounded-lg bg-indigo-50  flex items-center justify-center hover:bg-indigo-100 dark:hover:bg-indigo-800/40 transition-colors cursor-pointer">
