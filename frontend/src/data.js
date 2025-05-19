@@ -1,6 +1,6 @@
 const img = "/assets/gp.png";
 const text = "/assets/text.svg";
-const gpText = "/assets/gp.svg";
+const gpText = "/assets/g-p_text.png";
 const icon1 = "/assets/Layer_1-1.svg";
 const icon2 = "/assets/Layer_1-2.svg";
 const icon3 = "/assets/Layer_1-3.svg";

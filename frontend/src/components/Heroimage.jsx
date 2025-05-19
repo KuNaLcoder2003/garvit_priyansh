@@ -55,8 +55,22 @@ const useWindowWidth = () => {
   return width;
 };
 
+const useWindowHeigth = ()=>{
+  const [height , setHeight] = useState(window.innerHeight)
+  useEffect(() => {
+    const handleResize = () => setHeight(window.innerHeight);
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // run only once on mount
+
+  return height;
+}
+
 const Heroimage = ({ obj }) => {
   const width = useWindowWidth();
+  const height = useWindowHeigth();
 
   return (
     <div
