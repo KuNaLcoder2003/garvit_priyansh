@@ -136,14 +136,16 @@ const LandingPage = () => {
             />
           </foreignObject> */}
           <video
-              className="size-full overflow-hidden rounded-[55.75px] object-cover scale-[0.97]"
-              src={'https://res.cloudinary.com/doyifognr/video/upload/v1747993611/garvit_priyansh_video_comp_epjsty.mp4'}
-              // autoPlay
-              loop
-              muted
-              controls
-              playsInline
-            />
+            // className="size-full overflow-hidden rounded-[55.75px] object-cover scale-[0.97]"
+            src={'https://res.cloudinary.com/doyifognr/video/upload/v1747993611/garvit_priyansh_video_comp_epjsty.mp4'}
+            height={720}
+            width={1400}
+            className="mx-auto rounded-2xl object-cover h-full object-center scale-[0.98]"
+           
+           
+            controls
+            playsInline
+          />
         </ContainerScroll>
       </div>
       <Footer />
