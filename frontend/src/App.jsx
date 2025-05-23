@@ -1,6 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import './App.css'
-import obj from './data.js';
+import obj, { images } from './data.js';
 import { useEffect, useRef, useState } from 'react';
 
 import HeroSection from './components/HeroSection.jsx';
@@ -141,10 +141,11 @@ const LandingPage = () => {
             height={720}
             width={1400}
             className="mx-auto rounded-2xl object-cover h-full object-center scale-[0.98]"
-           
-           
+
+            preload='none'
             controls
             playsInline
+            poster={images.image_one}
           />
         </ContainerScroll>
       </div>
