@@ -30,6 +30,7 @@ import BandPage from './pages/BandPage.jsx';
 import { InfiniteMovingCardsDemo } from './components/MovingCardsDemo.jsx';
 import { Iphone15ProDemo } from './components/IPhoneDemo.jsx';
 import Testimonials from './pages/Testimonials.jsx';
+import { ContainerScroll } from './components/ContainerScrollAnimation.jsx';
 
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
       <Route path='/music' element={<MusicPage />} />
       <Route path='/events' element={<EventsPage />} />
       <Route path='/bandInfo' element={<BandPage />} />
-      <Route path='/testimomials' element={<Testimonials/>} />
+      <Route path='/testimomials' element={<Testimonials />} />
     </Routes>
 
 
@@ -94,11 +95,11 @@ const LandingPage = () => {
           <HeroSection obj={obj} />
           <Heroimage obj={obj} />
         </div>
-       
+
       </div>
       <Intro />
-      <ImageAbt />      
-      <Releases/>
+      <ImageAbt />
+      <Releases />
       <SpotifyArtistPage />
       <HeroParallax />
       <TimelineDemo />
@@ -106,11 +107,45 @@ const LandingPage = () => {
         <div className='w-[85%] self-center'>
           <h2 className='text-2xl md:text-3xl w-[90%] md:w-[60%]  font-bold text-slate-600 relative lg:w-[30%] 3xl:text-center'>Here's what people say about us</h2>
         </div>
-        <InfiniteMovingCardsDemo/>
+        <InfiniteMovingCardsDemo />
       </div>
       <ContactSection />
       <AboutUs />
-      <Iphone15ProDemo/>
+      {/* <Iphone15ProDemo/> */}
+      <div className=''>
+
+        <ContainerScroll scroll={false} titleComponent={
+          <>
+            <h1 className="text-4xl font-semibold" >
+              A message from   <br />
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none bg-clip-text text-transparent" style={{ backgroundImage: "radial-gradient(98.0344% 98.0344% at 1.35135% 3.04878%, rgb(49, 46, 129) 0%, rgb(3, 7, 18) 100%)" }}>
+                Garvit-Priyansh
+              </span>
+            </h1>
+          </>
+        }>
+          {/* <foreignObject x="22.25" y="19.50" width="389.5" height="843.5" scale={0.97}>
+            <video
+              className="size-full overflow-hidden rounded-[55.75px] object-cover scale-[0.97]"
+              src={obj.video}
+              // autoPlay
+              loop
+              muted
+              controls
+              playsInline
+            />
+          </foreignObject> */}
+          <video
+              className="size-full overflow-hidden rounded-[55.75px] object-cover scale-[0.97]"
+              src={'https://res.cloudinary.com/doyifognr/video/upload/v1747993611/garvit_priyansh_video_comp_epjsty.mp4'}
+              // autoPlay
+              loop
+              muted
+              controls
+              playsInline
+            />
+        </ContainerScroll>
+      </div>
       <Footer />
     </>
   )

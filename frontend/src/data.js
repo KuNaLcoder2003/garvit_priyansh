@@ -83,7 +83,7 @@ const goa_3 = '/assets/goa/goa_3.jpeg'
 
 const image_one = '/assets/image_1.jpeg'
 const image_two = '/assets/image_2.jpeg'
-const video = '/assets/gp_video.mp4'
+const video = '/assets/garvit_priyansh_video_comp.mp4'
 
 const logo = '/assets/colored-logo.png'
 

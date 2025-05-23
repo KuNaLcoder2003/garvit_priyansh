@@ -4,7 +4,8 @@ import { useScroll, useTransform, motion } from "framer-motion";
 
 export const ContainerScroll = ({
   titleComponent,
-  children
+  children,
+  scroll = true
 }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -32,20 +33,37 @@ export const ContainerScroll = ({
   const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <div
-      className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
-      ref={containerRef}>
-      <div
-        className="py-10 md:py-40 w-full relative"
-        style={{
-          perspective: "1000px",
-        }}>
-        <Header translate={translate} titleComponent={titleComponent} />
-        <Card rotate={rotate} translate={translate} scale={scale}>
-          {children}
-        </Card>
-      </div>
-    </div>
+    <>
+      {
+        scroll ? <div
+          className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
+          ref={containerRef}>
+          <div
+            className="py-10 md:py-40 w-full relative"
+            style={{
+              perspective: "1000px",
+            }}>
+            <Header translate={translate} titleComponent={titleComponent} />
+            <Card rotate={rotate} translate={translate} scale={scale}>
+              {children}
+            </Card>
+          </div>
+        </div> : <div
+          className="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
+        >
+          <div
+            className="py-10 md:py-40 w-full relative"
+            style={{
+              perspective: "1000px",
+            }}>
+            <Header translate={translate} titleComponent={titleComponent} />
+            <Card rotate={rotate} translate={translate} scale={scale}>
+              {children}
+            </Card>
+          </div>
+        </div>
+      }
+    </>
   );
 };
 
