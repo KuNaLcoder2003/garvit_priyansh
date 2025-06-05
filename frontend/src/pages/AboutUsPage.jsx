@@ -104,13 +104,13 @@ const AboutUsPage = () => {
             <div
               className="relative max-w-4xl m-auto rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-500"
               style={{
-                backgroundImage: `url(${images.img5})`,
+                backgroundImage: `url(${images.img8})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
             >
               {/* Crystal glass overlay */}
-              <div className="absolute inset-0 bg-white/5 backdrop-blur-lg border border-white/10">
+              <div className="absolute inset-0 bg-white/2 backdrop-blur-sm border border-white/10">
                 {/* Multi-layer glass effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-white/5 to-black/10"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/10"></div>
@@ -144,10 +144,10 @@ const AboutUsPage = () => {
                   </span>
 
                   <span className='block mb-6'>
-                    <span className='text-red-400 font-extrabold drop-shadow-md'>Signed with T-Series</span>, {' '}
-                    <span className='text-blue-400 font-extrabold drop-shadow-md'>Released original songs paired with visually rich music videos</span>, {' '}
-                    <span className='text-violet-400 font-extrabold drop-shadow-md'>Toured across India, performing live for audiences that connect with their stories</span> and {' '}
-                    <span className='text-orange-400 font-extrabold drop-shadow-md'>earned recognition and awards for their unique sound and storytelling</span>
+                    <span className='text-pink-400 font-extrabold drop-shadow-md'>Signed with T-Series</span>, {' '}
+                    <span className='text-pink-400 font-extrabold drop-shadow-md'>Released original songs paired with visually rich music videos</span>, {' '}
+                    <span className='text-pink-400 font-extrabold drop-shadow-md'>Toured across India, performing live for audiences that connect with their stories and</span>  {' '}
+                    <span className='text-pink-400 font-extrabold drop-shadow-md'>earned recognition and awards for their unique sound and storytelling</span>
                   </span>
 
                   <span className='block'>

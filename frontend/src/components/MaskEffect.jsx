@@ -27,7 +27,7 @@ const MaskEffect = () => {
           <div className='h-[500vh] bg-black'>
         
                 <motion.div
-                  className='fixed inset-0 h-full w-full bg-fixed bg-center bg-fixed bg-cover' style={{ backgroundImage: `url(${images.img2})`, scale: imageScale, opacity: outerImageOpacity }}>
+                  className='fixed inset-0 h-full w-full bg-fixed bg-center bg-fixed bg-cover' style={{ backgroundImage: `url(${images.img8})`, scale: imageScale, opacity: outerImageOpacity }}>
                 </motion.div>
         
                 <motion.div className={`fixed flex items-center m-auto w-full h-full inset-0 [mask-image:url('/garvit-priyansh-larger.svg')]  [mask-repeat:none]`}
@@ -38,7 +38,7 @@ const MaskEffect = () => {
                   }}>
                   <motion.div
         
-                    className='fixed inset-0 h-full w-full bg-fixed bg-center bg-cover' style={{ backgroundImage: `url(${images.img2})`, scale: imageScale }}>
+                    className='fixed inset-0 h-full w-full bg-fixed bg-center bg-cover' style={{ backgroundImage: `url(${images.img8})`, scale: imageScale }}>
                   </motion.div>
                   <motion.div className='fixed inset-0 h-full w-full bg-white'
                     style={{ opacity: whiteFillOpacity }}
