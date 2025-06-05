@@ -28,8 +28,8 @@ export function NavbarDemo() {
       link: "/bandInfo",
     },
     {
-      name: "Releases",
-      link: '/music'
+      name: "About us",
+      link: '/about'
     }
   ];
 

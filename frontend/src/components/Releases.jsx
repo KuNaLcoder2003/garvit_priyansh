@@ -50,26 +50,27 @@ const Releases = () => {
  const navigate = useNavigate()
   
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12">
+    <div className="w-full max-w-9xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full mb-6 md:mb-10">
         <h2 className="text-2xl md:text-3xl font-bold text-slate-600 mb-2 sm:mb-0">
           Our Releases
         </h2>
-        <button 
+        {/* <button 
           className="text-base md:text-lg font-bold cursor-pointer hover:text-blue-600 transition-colors"
           onClick={() => navigate('/music')}
         >
           See More
-        </button>
+        </button> */}
       </div>
       
-      <div className="flex flex-col items-center gap-8 md:gap-12 lg:gap-16 w-full">
+      {/* <div className="flex flex-col items-center gap-8 md:gap-12 lg:gap-16 w-full">
         {
           tracks.map((track)=>(
             <MusicReleaseCards obj={track} key={track.id} />
           ))
         }
-      </div>
+      </div> */}
+      <iframe style={{}} className='rounded-0 w-[100%] text-xl'  src="https://open.spotify.com/embed/artist/6pYc4P7IWYwWttTPzYkDV4?utm_source=generator&theme=0"  height="600" frameBorder="0" allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   );
 };

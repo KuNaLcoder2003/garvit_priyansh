@@ -82,14 +82,11 @@ const Events = () => {
     )
 }
 
-const EventCard = ({ event, isInView, ref, index }) => {
+export const EventCard = ({ event, isInView, ref, index }) => {
     return (
         <motion.div
             ref={ref}
-            // initial={{ opacity: 0, y: -40 }}
-            // whileInView={{ opacity: 1, y: 0 }}
-            // exit={{ opacity: 0.3, y: 20 }}
-            // transition={{ duration: 0.6, ease : "linear" }}
+           
             key={`${index}_${event.eventName}`} className='flex flex-col md:flex-row gap-14 lg:gap-16  items-center md:items-align rounded-xl shadow-2xl p-2 lg:p-4'>
             <div className='w-[280px] h-[280px]'>
                 <img

@@ -31,6 +31,8 @@ import { InfiniteMovingCardsDemo } from './components/MovingCardsDemo.jsx';
 import { Iphone15ProDemo } from './components/IPhoneDemo.jsx';
 import Testimonials from './pages/Testimonials.jsx';
 import { ContainerScroll } from './components/ContainerScrollAnimation.jsx';
+import Temp from './pages/Temp.jsx';
+import AboutUsPage from './pages/AboutUsPage.jsx';
 
 
 function App() {
@@ -45,6 +47,7 @@ function App() {
       <Route path='/events' element={<EventsPage />} />
       <Route path='/bandInfo' element={<BandPage />} />
       <Route path='/testimomials' element={<Testimonials />} />
+      <Route path='/about' element={<AboutUsPage/>} />
     </Routes>
 
 
@@ -124,17 +127,7 @@ const LandingPage = () => {
             </h1>
           </>
         }>
-          {/* <foreignObject x="22.25" y="19.50" width="389.5" height="843.5" scale={0.97}>
-            <video
-              className="size-full overflow-hidden rounded-[55.75px] object-cover scale-[0.97]"
-              src={obj.video}
-              // autoPlay
-              loop
-              muted
-              controls
-              playsInline
-            />
-          </foreignObject> */}
+          
           <video
             // className="size-full overflow-hidden rounded-[55.75px] object-cover scale-[0.97]"
             src={'https://res.cloudinary.com/doyifognr/video/upload/v1747993611/garvit_priyansh_video_comp_epjsty.mp4'}

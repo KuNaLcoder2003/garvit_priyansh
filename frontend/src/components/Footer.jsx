@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Footer = () => {
-    return (
-        <footer className="bg-[#0c0f1f] text-white py-12 px-6 md:px-20">
+const Footer = ({postion}) => {
+  return (
+    <footer className={"bg-[#0c0f1f] text-white py-12 px-6 md:px-20"}>
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Left Section */}
         <div>
@@ -59,7 +59,7 @@ const Footer = () => {
         Copyright © 2025 Garvit x Priyansh
       </p>
     </footer>
-    )
+  )
 }
 
 export default Footer
