@@ -56,7 +56,7 @@ const Footer = ({postion}) => {
       <hr className="my-8 border-t border-white/10" />
 
       <p className="text-center text-xs text-gray-400">
-        Copyright © 2025 Garvit x Priyansh
+        Copyright © 2025 Garvit - Priyansh
       </p>
     </footer>
   )

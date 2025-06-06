@@ -66,7 +66,7 @@ const AboutUsPage = () => {
 
         <div className='absolute w-full p-6'>
 
-          <h1 className='text-black font-bold text-4xl text-center p-4 m-auto w-[60%] bg-gradient-to-r from-red-600 via-blue-400 to-blue-800 bg-clip-text text-transparent' style={{ zIndex: "99999" }}>Some journeys begin with a single step. Ours began with a single reel.</h1>
+          <h1 className='text-black w-full font-bold text-4xl text-center p-4 m-auto lg:w-[60%] bg-gradient-to-r from-red-600 via-blue-400 to-blue-800 bg-clip-text text-transparent' style={{ zIndex: "99999" }}>Some journeys begin with a single step. Ours began with a single reel.</h1>
 
           {/* <p className='text-black font-bold max-w-8xl text-center text-lg p-4 text-stone-500'>
 
@@ -123,7 +123,7 @@ const AboutUsPage = () => {
               <div className="relative z-10 p-8">
                 <p className='text-white font-bold max-w-full text-center text-lg p-6 leading-relaxed drop-shadow-lg'>
                   <span className='block mb-6'>
-                    Some journeys begin with a single step. Ours began with a single reel.
+                    
                     In late 2021, while casually scrolling through Instagram, Priyansh stumbled upon Garvit's reel — a simple frame, a raw voice, and an energy that lingered. There was something unmistakably real in the way he sang — not just technical skill, but soul. Instantly drawn to the sincerity and spark in Garvit's performance, Priyansh reached out with a message that would unknowingly shape their future: "Let's collaborate on a cover?"
                   </span>
 
@@ -144,10 +144,10 @@ const AboutUsPage = () => {
                   </span>
 
                   <span className='block mb-6'>
-                    <span className='text-pink-400 font-extrabold drop-shadow-md'>Signed with T-Series</span>, {' '}
-                    <span className='text-pink-400 font-extrabold drop-shadow-md'>Released original songs paired with visually rich music videos</span>, {' '}
-                    <span className='text-pink-400 font-extrabold drop-shadow-md'>Toured across India, performing live for audiences that connect with their stories and</span>  {' '}
-                    <span className='text-pink-400 font-extrabold drop-shadow-md'>earned recognition and awards for their unique sound and storytelling</span>
+                    <span className='text-pink-600 font-extrabold drop-shadow-md'>Signed with T-Series</span>, {' '}
+                    <span className='text-pink-600 font-extrabold drop-shadow-md'>Released original songs paired with visually rich music videos</span>, {' '}
+                    <span className='text-pink-600 font-extrabold drop-shadow-md'>Toured across India, performing live for audiences that connect with their stories and</span>  {' '}
+                    <span className='text-pink-600 font-extrabold drop-shadow-md'>earned recognition and awards for their unique sound and storytelling</span>
                   </span>
 
                   <span className='block'>
