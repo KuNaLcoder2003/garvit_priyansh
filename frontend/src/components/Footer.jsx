@@ -18,17 +18,17 @@ const Footer = ({postion}) => {
         <div>
           <h3 className="text-md font-semibold mb-3">Our Events</h3>
           <ul className="text-sm space-y-2 text-gray-300">
-            <li>Tickets</li>
-            <li>Events</li>
+            <li className='cursor-pointer'>Tickets</li>
+            <li className='cursor-pointer' onClick={()=>navigate('/events')}>Events</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-md font-semibold mb-3">Eventick</h3>
           <ul className="text-sm space-y-2 text-gray-300">
-            <li onClick={()=>navigate('/about')}>About Us</li>
-            <li onClick={()=>window.open('https://www.google.com/search?sca_esv=a39f92e395423779&sxsrf=AHTn8zoMSWUbRnJlrxX7pfOaqnACg9Eg4Q:1745170219964&q=garvit+-+priyansh&tbm=nws&source=lnms&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBnsX62dbVmWR6QCQ5QEtPRrN1KFHti9EP_dqC742rxzHNYrK4aIGJt-VBGd9a6Cy3Dl1HqW_sTT8wc9lpslZ6fuwWHalBlUzR8HEEWjKxPPga3QxEMEVcfy757Rbg7ewU6YNapAj2QBRkJdPrPwxazHtPzxcCuafXXHCgIJEkvb8bDo2fw&sa=X&ved=2ahUKEwiGjaLYkeeMAxWPklYBHTJeIREQ0pQJegQIEBAB&biw=729&bih=798&dpr=2' , '_blank')}>Press</li>
-            <li onClick={()=>window.open('https://forms.gle/1t2aErfkLNEySDPUA' , '_blank')}>Contact Us</li>
+            <li className='cursor-pointer' onClick={()=>navigate('/about')}>About Us</li>
+            <li className='cursor-pointer' onClick={()=>window.open('https://www.google.com/search?sca_esv=a39f92e395423779&sxsrf=AHTn8zoMSWUbRnJlrxX7pfOaqnACg9Eg4Q:1745170219964&q=garvit+-+priyansh&tbm=nws&source=lnms&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBnsX62dbVmWR6QCQ5QEtPRrN1KFHti9EP_dqC742rxzHNYrK4aIGJt-VBGd9a6Cy3Dl1HqW_sTT8wc9lpslZ6fuwWHalBlUzR8HEEWjKxPPga3QxEMEVcfy757Rbg7ewU6YNapAj2QBRkJdPrPwxazHtPzxcCuafXXHCgIJEkvb8bDo2fw&sa=X&ved=2ahUKEwiGjaLYkeeMAxWPklYBHTJeIREQ0pQJegQIEBAB&biw=729&bih=798&dpr=2' , '_blank')}>Press</li>
+            <li className='cursor-pointer' onClick={()=>window.open('https://forms.gle/1t2aErfkLNEySDPUA' , '_blank')}>Contact Us</li>
             
           </ul>
         </div>
