@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { use } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = ({postion}) => {
+  const navigate = useNavigate();
   return (
     <footer className={"bg-[#0c0f1f] text-white py-12 px-6 md:px-20"}>
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -14,25 +16,20 @@ const Footer = ({postion}) => {
 
         {/* Middle Sections */}
         <div>
-          <h3 className="text-md font-semibold mb-3">Plan Events</h3>
+          <h3 className="text-md font-semibold mb-3">Our Events</h3>
           <ul className="text-sm space-y-2 text-gray-300">
-            <li>Create and Set Up</li>
-            <li>Sell Tickets</li>
-            <li>Online RSVP</li>
-            <li>Online Events</li>
+            <li>Tickets</li>
+            <li>Events</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-md font-semibold mb-3">Eventick</h3>
           <ul className="text-sm space-y-2 text-gray-300">
-            <li>About Us</li>
-            <li>Press</li>
-            <li>Contact Us</li>
-            <li>Help Center</li>
-            <li>How it Works</li>
-            <li>Privacy</li>
-            <li>Terms</li>
+            <li onClick={()=>navigate('/about')}>About Us</li>
+            <li onClick={()=>window.open('https://www.google.com/search?sca_esv=a39f92e395423779&sxsrf=AHTn8zoMSWUbRnJlrxX7pfOaqnACg9Eg4Q:1745170219964&q=garvit+-+priyansh&tbm=nws&source=lnms&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBnsX62dbVmWR6QCQ5QEtPRrN1KFHti9EP_dqC742rxzHNYrK4aIGJt-VBGd9a6Cy3Dl1HqW_sTT8wc9lpslZ6fuwWHalBlUzR8HEEWjKxPPga3QxEMEVcfy757Rbg7ewU6YNapAj2QBRkJdPrPwxazHtPzxcCuafXXHCgIJEkvb8bDo2fw&sa=X&ved=2ahUKEwiGjaLYkeeMAxWPklYBHTJeIREQ0pQJegQIEBAB&biw=729&bih=798&dpr=2' , '_blank')}>Press</li>
+            <li onClick={()=>window.open('https://forms.gle/1t2aErfkLNEySDPUA' , '_blank')}>Contact Us</li>
+            
           </ul>
         </div>
 
