@@ -6,50 +6,61 @@ import { motion, useInView } from 'framer-motion'
 
 const events = [
     {
-        eventName: "NMIMS FEST Requiem - Duo Show",
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+        eventName: "Requiem NMIMS",
+        location : 'Mumbai',
+        
         src: images.nims_1,
     },
     {
         eventName: "Antisocial mumbai",
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+        location : 'Mumbai',
+       
         src: images.anti_1
     },
     {
         eventName: "JW Marriott show",
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+
+        location : 'Mumbai',
+        
         src: images.jw_1
     },
     {
-        eventName: "Goa show - Royal Enfield motoverse show",
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+        eventName: "Royal Enfield Motoverse Goa",
+        location : 'Goa',
+        
         src: images.goa_1
     },
     
     {
-        eventName : "Lafz EP promotion show - SIES COLLEGE Nerul" , 
-        description : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+        eventName : "SIES Nerul" , 
+
+        location : 'Mumbai',
+        
         src : images.anti_6
     } , 
     {
-        eventName : "Social nation show - BKC - Mumbai" , 
-        description : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+        eventName : "Social Nation Mumbai" , 
+
+        location : 'Mumbai',
+        
         src : images.image_one
     } , 
 
     {
-        eventName : "Debut India tour - Mumbai" , 
-        description : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+        eventName : "Khwabon Ke Rang Tour - Mumbai" , 
+        location : 'Mumbai',
+        
         src : images.mumbai_2
     } , 
     {
-        eventName : "Debut India tour - Bangalore" , 
-        description : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+        eventName : "Khwabon Ke Rang Tour - Bangalore" , 
+        location : 'Bangalore',
+        
         src : images.img2
     } ,
     {
-        eventName : "Debut India tour - Delhi" , 
-        description : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
+        eventName : "Khwabon Ke Rang Tour - Delhi" , 
+        location : 'Delhi',
         src : images.delhi_2
     } ,  
     
@@ -72,7 +83,7 @@ const Events = () => {
                         const isView = useInView(ref, { once: false })
 
                         return (
-                            <EventCard key={`${event.eventName}_${index}`} img={event.src} name={event.eventName} />
+                            <EventCard key={`${event.eventName}_${index}`} img={event.src} location={event.location} name={event.eventName} />
                         )
                     })
                 }
@@ -88,6 +99,7 @@ export const EventCard = ({img , name , location='Mumbai'}) => {
       {/* Album Art */}
       <div className="overflow-hidden rounded-xl">
         <img
+        loading="lazy"
           src={img} // your image file
           alt="Where Are You Now"
           className="w-full h-full object-cover"
