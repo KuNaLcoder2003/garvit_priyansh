@@ -47,7 +47,7 @@ const RecentRelease = () => {
   </div>
 
   {/* Song Info */}
-  <div className="w-full md:w-[60%] flex flex-col justify-center text-center md:text-left items-baseline">
+  <div className="w-full md:w-[60%] flex flex-col justify-center text-center md:text-left items-center lg:items-baseline">
     <h2 className="text-white font-extrabold text-3xl sm:text-4xl lg:text-5xl">
       Tu Sab Vekheya
     </h2>
@@ -66,7 +66,7 @@ const RecentRelease = () => {
     </div>
     <button 
     onClick={()=>window.open('https://open.spotify.com/album/35ldZRrH83VXMtjooYmXjk' , '_blank')}
-     className="bg-gradient-to-r from-zinc-900 to-neutral-700 text-white font-bold p-2 w-[30%] rounded-lg text-center text-sm sm:text-base mt-3 cursor-pointer transition duration-200">
+     className="bg-gradient-to-r from-zinc-900 to-neutral-700 text-white font-bold p-2 w-[60%] lg:w-[30%] rounded-lg text-center text-sm sm:text-base mt-3 cursor-pointer transition duration-200">
       <p className='text -center bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent'>Listen Now</p>
     </button>
 
