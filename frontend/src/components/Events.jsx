@@ -34,7 +34,7 @@ const events = [
     {
         eventName : "Social nation show - BKC - Mumbai" , 
         description : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tenetur nostrum odit error sed consequuntur at quia facilis, voluptatibus amet dolore aperiam perspiciatis. Odio quasi aperiam reprehenderit temporibus cumque eum!',
-        src : images.image_two
+        src : images.image_one
     } , 
 
     {
@@ -65,14 +65,14 @@ const Events = () => {
 
 
 
-            <div className='flex flex-col w-[95%]  p-4 lg:w-[85%] m-auto items-center gap-20'>
+            <div className='flex flex-col lg:flex-row lg:justify-center flex-nowrap lg:flex-wrap w-[95%]  p-4 lg:w-[85%] m-auto items-center gap-20'>
                 {
                     events.map((event, index) => {
                         const ref = useRef(null);
                         const isView = useInView(ref, { once: false })
 
                         return (
-                            <EventCard key={`${event.name}_${index}`} event={event} ref={ref} isInView={isView} index={index} />
+                            <EventCard key={`${event.eventName}_${index}`} img={event.src} name={event.eventName} />
                         )
                     })
                 }
@@ -82,69 +82,26 @@ const Events = () => {
     )
 }
 
-export const EventCard = ({ event, isInView, ref, index }) => {
+export const EventCard = ({img , name , location='Mumbai'}) => {
     return (
-        <motion.div
-            ref={ref}
-           
-            key={`${index}_${event.eventName}`} className='flex flex-col md:flex-row gap-14 lg:gap-16  items-center md:items-align rounded-xl shadow-2xl p-2 lg:p-4'>
-            <div className='w-[280px] h-[280px]'>
-                <img
-                    src={event.src}
-                    alt={event.eventName}
-                    width={500}
-                    height={500}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center" />
-            </div>
-            <div className='flex flex-col gap-4 p-2'>
-                <div className=''>
-                    <h2 className='text-3xl font-bold bg-clip-text text-transparent text-center lg:text-start' style={{ backgroundImage: "radial-gradient(98.0344% 98.0344% at 1.35135% 3.04878%, rgb(49, 46, 129) 0%, rgb(3, 7, 18) 100%)" }} >{event.eventName}</h2>
-                    {/* <p className='text-md font-semibold text-center lg:text-start'>23/09/2024</p> */}
-                </div>
+        <div className="bg-black text-white p-4 rounded-2xl max-w-70 shadow-lg">
+      {/* Album Art */}
+      <div className="overflow-hidden rounded-xl">
+        <img
+          src={img} // your image file
+          alt="Where Are You Now"
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-                {/* <p className='max-w-3xl'> {testimonial.quote} </p> */}
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="max-w-3xl text-stone-400 font-semibold text-center lg:text-start">
-                    {isInView && event.description.split(" ").map((word, index) => (
-                        <motion.span
-                            key={index}
-                            initial={{
-                                filter: "blur(10px)",
-                                opacity: 0,
-                                y: 5,
-                            }}
-                            animate={{
-                                filter: "blur(0px)",
-                                opacity: 1,
-                                y: 0,
-                            }}
-                            transition={{
-                                duration: 0.7,
-                                ease: "easeInOut",
-                                delay: 0.02 * index,
-                            }}
-                            className="inline-block">
-                            {word}&nbsp;
-                        </motion.span>
-                    ))}
-                </motion.p>
-                <motion.div
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -30 }}
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.4, ease: "easeIn", delay: 0.5 }}
-                    className='flex items-center gap-4 w-[100%] lg:w-[50%] p-2'>
-
-                    {/* <button className='font-semibold w-[90%] m-auto lg:m-0 lg:w-[30%] p-2 bg-green-500 text-white rounded-lg cursor-pointer'>Know more</button> */}
-                </motion.div>
-            </div>
-
-        </motion.div>
+      {/* Song Info */}
+      <div className="mt-4">
+        <p className="text-white font-semibold text-base leading-tight truncate">
+          {name}
+        </p>
+        <p className="text-gray-400 text-sm mt-1">{location}</p>
+      </div>
+    </div>
     )
 }
 

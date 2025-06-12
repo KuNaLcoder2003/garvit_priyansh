@@ -59,7 +59,7 @@ const RecentRelease = () => {
       </div>
 
       <div className='flex items-center gap-4'>
-        <img  src='https://i.scdn.co/image/ab676161000051742edf28eb85c9758390ea20f5' className='w-[40px] h-[40px] rounded-full'/>
+        <img loading="lazy" src='https://i.scdn.co/image/ab676161000051742edf28eb85c9758390ea20f5' className='w-[40px] h-[40px] rounded-full'/>
         <p>Hansika Pareek</p>
       </div>
 
