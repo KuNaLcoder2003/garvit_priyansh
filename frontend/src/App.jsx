@@ -33,6 +33,8 @@ import Testimonials from './pages/Testimonials.jsx';
 import { ContainerScroll } from './components/ContainerScrollAnimation.jsx';
 import Temp from './pages/Temp.jsx';
 import AboutUsPage from './pages/AboutUsPage.jsx';
+import RecentRelease from './components/RecentRelease.jsx';
+import CrystalContainer from './components/RecentRelease.jsx';
 
 
 function App() {
@@ -102,7 +104,13 @@ const LandingPage = () => {
       </div>
       <Intro />
       <ImageAbt />
+
+      {/* Latest release poster  */}
+
+      <RecentRelease/>
+      
       <Releases />
+      
       <SpotifyArtistPage />
       <HeroParallax />
       <TimelineDemo />

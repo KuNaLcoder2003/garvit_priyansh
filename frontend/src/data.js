@@ -87,6 +87,9 @@ const video = '/assets/garvit_priyansh_video_comp.mp4'
 
 const logo = '/assets/colored-logo.png'
 
+const rr = '/assets/RR.png'
+const tsv = '/assets/TSV.png'
+
 
 
 export const images = {
@@ -133,7 +136,9 @@ export const images = {
     goa_2,
     goa_3,
     image_one,
-    image_two
+    image_two,
+    rr , 
+    tsv
 }
 
 

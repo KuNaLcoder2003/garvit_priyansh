@@ -5,7 +5,8 @@ import { useScroll, useTransform, motion } from "framer-motion";
 export const ContainerScroll = ({
   titleComponent,
   children,
-  scroll = true
+  scroll = true ,
+  scale_val,
 }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -44,7 +45,7 @@ export const ContainerScroll = ({
               perspective: "1000px",
             }}>
             <Header translate={translate} titleComponent={titleComponent} />
-            <Card rotate={rotate} translate={translate} scale={scale}>
+            <Card rotate={rotate} translate={translate} scale={scale_val ? scale_val : scale}>
               {children}
             </Card>
           </div>
@@ -57,7 +58,7 @@ export const ContainerScroll = ({
               perspective: "1000px",
             }}>
             <Header translate={translate} titleComponent={titleComponent} />
-            <Card rotate={rotate} translate={translate} scale={scale}>
+            <Card rotate={''} translate={translate} scale={scale}>
               {children}
             </Card>
           </div>
