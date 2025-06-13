@@ -95,14 +95,14 @@ const Events = () => {
 
 export const EventCard = ({img , name , location='Mumbai'}) => {
     return (
-        <div className="bg-black text-white p-4 rounded-2xl max-w-70 shadow-lg">
+        <div className="bg-black text-white p-4 rounded-2xl w-70 shadow-lg">
       {/* Album Art */}
-      <div className="overflow-hidden rounded-xl">
+      <div className="overflow-hidden rounded-xl h-[90%] overflow-hidden">
         <img
         loading="lazy"
           src={img} // your image file
           alt="Where Are You Now"
-          className="w-full h-full object-cover"
+          className="w-full max-h-40 object-cover"
         />
       </div>
 
