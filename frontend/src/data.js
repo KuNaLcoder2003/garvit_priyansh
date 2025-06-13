@@ -89,6 +89,7 @@ const logo = '/assets/colored-logo.png'
 
 const rr = '/assets/RR.png'
 const tsv = '/assets/TSV.png'
+const nerul = '/assets/Nerul.jpeg'
 
 
 
@@ -138,7 +139,8 @@ export const images = {
     image_one,
     image_two,
     rr , 
-    tsv
+    tsv , 
+    nerul
 }
 
 

@@ -36,7 +36,7 @@ const events = [
 
         location : 'Mumbai',
         
-        src : images.anti_6
+        src : images.nerul
     } , 
     {
         eventName : "Social Nation Mumbai" , 

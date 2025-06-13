@@ -18,7 +18,7 @@ const teamMembers = [{
     image: obj.garvit,
 },
 {
-    name: "Priyansh Shrivastav",
+    name: "Priyansh Srivastava",
     role: "Singer",
     bio: "Priyansh Srivastava is an indie singer-songwriter and composer from Faridabad, Haryana, blending emotional storytelling with classical training. A Mechanical Engineering graduate, he holds a Junior Diploma, Senior Diploma, and Prabhakar in Indian classical vocals from Prayag Sangeet Samiti. His music explores themes of love, introspection, and spiritual depth. Beyond music, Priyansh enjoys football and cooking, often likening the art of songwriting to crafting a dish. With heartfelt vocals and a structured approach, he brings soul and discipline to the duo’s unique sound.",
     
