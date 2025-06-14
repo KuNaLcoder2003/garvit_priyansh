@@ -1,10 +1,38 @@
-import React, { use } from 'react'
+import React, { use, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {Toaster,toast} from "react-hot-toast"
 
 const Footer = ({postion}) => {
+
+  const [email , setEmail] = useState('')
+
+  function sendMail() {
+    try {
+      fetch('https://garvit-priyansh-backend.onrender.com/mail' , {
+        method : 'POST' , 
+        headers : {
+          'Content-Type' : 'application/json'
+        },
+        body : JSON.stringify({
+          email : email
+        }) , 
+        
+      }).then(async(response)=>{
+        const data = await response.json();
+        if(data.id) {
+          toast.success('Subscribed to Garvit-Priyansh newsletter')
+        } else {
+          toast.error('Failed to subscribe')
+        }
+      })
+    } catch (error) {
+      toast.error('Something went wrong')
+    }
+  }
   const navigate = useNavigate();
   return (
     <footer className={"bg-[#0c0f1f] text-white py-12 px-6 md:px-20"}>
+      <Toaster/>
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Left Section */}
         <div>
@@ -40,10 +68,12 @@ const Footer = ({postion}) => {
           <div className="flex items-center bg-gradient-to-r from-white to-white/80 rounded-full px-1 py-1 shadow-md w-full">
             <input
               type="email"
+              value={email}
+              onChange={(e)=>setEmail(e.target.value)}
               placeholder="Enter your email address.."
               className="px-4 py-2 rounded-full outline-none bg-transparent text-sm text-black placeholder-gray-500 w-full"
             />
-            <button className="bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition duration-300 whitespace-nowrap">
+            <button onClick={()=>{sendMail()}} className="bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition duration-300 whitespace-nowrap">
               Subscribe Now
             </button>
           </div>
