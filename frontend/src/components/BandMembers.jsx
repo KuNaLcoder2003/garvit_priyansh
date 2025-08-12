@@ -26,13 +26,6 @@ const teamMembers = [{
     image: obj.mithilesh,
 },
 {
-    name: "Aditya Kulkarni",
-    role: "Guitarist",
-    bio: "Aditya Kulkarni is a self-taught guitarist who also plays the keyboards. With a growing passion for music production, he primarily explores cinematic, Bollywood, and fusion styles. In his free time, he enjoys jamming, experimenting with new musical ideas, and discovering fresh sounds and plugins. For Aditya, music is a constant presence — whether he's listening, creating, or planning his next musical venture.",
-
-    image: obj.aditya,
-},
-{
     name: "Nikhil Bachute",
     role: "Drumer",
     bio: "Nikhil Bachute is a dynamic drummer with over eight years of experience and four years in the professional music scene. Renowned for his versatility and rhythmic precision, he has toured globally and performed with top artists like Sukhwinder Singh, Shaan, Gajendra Verma, and Ash King. He’s been part of major acts including Vinod B Project, Euphony, Sayli Kamble, Rohit Raut, and Saif Ali Khan’s live ensemble. A multi-time band competition winner, Nikhil also explored acting, appearing in Season 2 of Bandish Bandits. With a strong groove and evolving style, he continues to make his mark in the Indian music industry.",
