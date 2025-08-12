@@ -30,12 +30,54 @@ const RecentRelease = () => {
     //   </div>
     // </div>
 
-    <div className="bg-black text-white flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-8 mt-10 mx-auto rounded-2xl w-[90%] max-w-5xl shadow-lg gap-6">
+    <div className='w-full flex flex-col items-center'>
+
+      <div className="bg-black text-white flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-8 mt-10 mx-auto rounded-2xl w-[90%] max-w-5xl shadow-lg gap-6">
+  {/* Album Image & Label */}
+  <div className="relative w-full md:w-[40%] max-w-[300px]">
+    {/* Tooltip/Label */}
+    <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-md shadow">
+      Latest Release
+    </div>
+
+    {/* Album Image */}
+    <img
+      src="https://i.scdn.co/image/ab67616d00001e0272c504b9be9aa5b1749aace7" // replace with your actual path
+      alt="Where Are You Now"
+      className="w-full h-auto rounded-xl object-cover shadow-md"
+    />
+  </div>
+
+  {/* Song Info */}
+  <div className="w-full md:w-[60%] flex flex-col justify-center text-center md:text-left items-center lg:items-baseline">
+    <h2 className="text-white font-extrabold text-3xl sm:text-4xl lg:text-5xl">
+      Maahi O Maahi
+    </h2>
+    <div className='p-4 flex flex-col gap-6'>
+
+      <div className='flex items-center gap-4'>
+        <img  src='https://i.scdn.co/image/ab6761610000101fb9ab31e8839873a90a208143' className='w-[40px] h-[40px] rounded-full'/>
+        <p>Garvit - Priyansh</p>
+      </div>
+
+
+    </div>
+    <button 
+    onClick={()=>window.open('https://open.spotify.com/track/0BHVErgRxG5ssrlUOKyFnK?si=ad80ec9a2ce74700' , '_blank')}
+     className="bg-gradient-to-r from-zinc-900 to-neutral-700 text-white font-bold p-2 w-[60%] lg:w-[30%] rounded-lg text-center text-sm sm:text-base mt-3 cursor-pointer transition duration-200">
+      <p className='text -center bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent'>Listen Now</p>
+    </button>
+
+    
+  </div>
+</div>
+      
+      <div className="bg-black text-white flex flex-col md:flex-row items-center md:items-start justify-between p-6 md:p-8 mt-10 mx-auto rounded-2xl w-[90%] max-w-5xl shadow-lg gap-6">
   {/* Album Image & Label */}
   <div className="relative w-full md:w-[40%] max-w-[300px]">
     {/* Tooltip/Label */}
     <div className="absolute top-2 left-2 bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-md shadow">
-      Latest Release
+      Listen Now
     </div>
 
     {/* Album Image */}
@@ -73,6 +115,7 @@ const RecentRelease = () => {
     
   </div>
 </div>
+    </div>
   )
 }
 
