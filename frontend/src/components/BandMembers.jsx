@@ -69,17 +69,9 @@ export const BandMembers = ({
         return Math.floor(Math.random() * 21) - 10;
     };
 
-
-
     return (
         <>
-
-
-
-
-            <div
-                className="flex-1 mt-[-50px] mx-auto max-w-sm px-4 py-20 flex flex-col gap-8 font-sans antialiased md:max-w-6xl md:px-8 lg:px-12">
-
+            <div className="flex-1 mt-[-50px] mx-auto max-w-sm px-4 py-20 flex flex-col gap-8 font-sans antialiased md:max-w-6xl md:px-8 lg:px-12">
                 <div className="relative grid grid-cols-1 gap-16 md:grid-cols-2">
                     <div>
                         <div className="relative h-80 w-full text-white">
