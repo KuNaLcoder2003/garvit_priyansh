@@ -1,4 +1,4 @@
-import { ChevronDown } from 'lucide-react';
+import { ReactLenis, useLenis } from 'lenis/react'
 import './App.css'
 import obj, { images } from './data.js';
 import { useEffect, useRef, useState } from 'react';
@@ -39,24 +39,33 @@ import CrystalContainer from './components/RecentRelease.jsx';
 
 function App() {
 
+  const lenis = useLenis((lenis) => {
+    // called every scroll
+    console.log(lenis)
+  })
+
 
   return (
 
-    <Routes>
-      <Route path='/' element={<LandingPage />} />
-      <Route path='/gallery' element={<Gallery />} />
-      <Route path='/music' element={<MusicPage />} />
-      <Route path='/events' element={<EventsPage />} />
-      <Route path='/bandInfo' element={<BandPage />} />
-      <Route path='/testimomials' element={<Testimonials />} />
-      <Route path='/about' element={<AboutUsPage/>} />
-    </Routes>
+    <>
+      <ReactLenis root />
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+        <Route path='/gallery' element={<Gallery />} />
+        <Route path='/music' element={<MusicPage />} />
+        <Route path='/events' element={<EventsPage />} />
+        <Route path='/bandInfo' element={<BandPage />} />
+        <Route path='/testimomials' element={<Testimonials />} />
+        <Route path='/about' element={<AboutUsPage />} />
+      </Routes>
+    </>
 
 
   );
 }
 
 const LandingPage = () => {
+
   const heroRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -107,10 +116,10 @@ const LandingPage = () => {
 
       {/* Latest release poster  */}
 
-      <RecentRelease/>
-      
+      <RecentRelease />
+
       <Releases />
-      
+
       <SpotifyArtistPage />
       <HeroParallax />
       <TimelineDemo />
@@ -135,7 +144,7 @@ const LandingPage = () => {
             </h1>
           </>
         }>
-          
+
           <video
             // className="size-full overflow-hidden rounded-[55.75px] object-cover scale-[0.97]"
             src={'https://res.cloudinary.com/doyifognr/video/upload/v1747993611/garvit_priyansh_video_comp_epjsty.mp4'}
