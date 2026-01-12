@@ -1,6 +1,6 @@
 
 
-import banner from "/assets/GP_Banner.png";
+import banner from "/assets/GP_Banner-1.png";
 
 const HeroSection = ({ obj }) => {
   return (
