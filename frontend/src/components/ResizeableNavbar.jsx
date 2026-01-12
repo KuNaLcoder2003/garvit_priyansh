@@ -1,5 +1,5 @@
 import { cn } from "../utils";
-import { MenuIcon , CrossIcon } from "lucide-react";
+import { MenuIcon, CrossIcon } from "lucide-react";
 import {
   motion,
   AnimatePresence,
@@ -68,7 +68,7 @@ export const NavBody = ({
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-white px-4 py-2 lg:flex ",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-white px-4 py-2 lg:flex",
         visible && "bg-white/80 ",
         className
       )}>
@@ -88,7 +88,7 @@ export const NavItems = ({
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2 shadow-lg rounded-lg",
         className
       )}>
       {items.map((item, idx) => (
@@ -194,7 +194,7 @@ export const NavbarLogo = () => {
   const navigate = useNavigate()
   return (
     <p
-      onClick={()=>navigate('/')}
+      onClick={() => navigate('/')}
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <img
         src={obj.logo}
@@ -229,7 +229,7 @@ export const NavbarButton = ({
   return (
     <Tag
       href={href || undefined}
-      target="_blank" 
+      target="_blank"
       rel="noopener noreferrer"
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}>

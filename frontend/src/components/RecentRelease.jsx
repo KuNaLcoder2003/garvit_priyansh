@@ -41,7 +41,7 @@ const RecentRelease = () => {
 
           {/* Album Image */}
           <img
-            src="https://i.scdn.co/image/ab67616d0000b2731f2c1b67a525cb5b6ccbb7fd" // replace with your actual path
+            src="https://i.scdn.co/image/ab67616d00001e02b9b56a91fa328950bc1b05ac"
             alt="Where Are You Now"
             className="w-full h-auto rounded-xl object-cover shadow-md"
           />
@@ -50,7 +50,7 @@ const RecentRelease = () => {
         {/* Song Info */}
         <div className="w-full md:w-[60%] flex flex-col justify-center text-center md:text-left items-center lg:items-baseline">
           <h2 className="text-white font-extrabold text-3xl sm:text-4xl lg:text-5xl">
-            Kaahe Mose
+            Theher Ja
           </h2>
           <div className='p-4 flex flex-col gap-6'>
 
@@ -78,7 +78,7 @@ const RecentRelease = () => {
 
           {/* Album Image */}
           <img
-            src="https://i.scdn.co/image/ab67616d00001e0272c504b9be9aa5b1749aace7" // replace with your actual path
+            src="https://i.scdn.co/image/ab67616d00001e021f2c1b67a525cb5b6ccbb7fd"
             alt="Where Are You Now"
             className="w-full h-auto rounded-xl object-cover shadow-md"
           />
@@ -87,7 +87,7 @@ const RecentRelease = () => {
         {/* Song Info */}
         <div className="w-full md:w-[60%] flex flex-col justify-center text-center md:text-left items-center lg:items-baseline">
           <h2 className="text-white font-extrabold text-3xl sm:text-4xl lg:text-5xl">
-            Maahi O Maahi
+            Kaahe Mose
           </h2>
           <div className='p-4 flex flex-col gap-6'>
 

@@ -30,10 +30,10 @@ export function NavbarDemo() {
     {
       name: "About us",
       link: '/about'
-    } , 
+    },
     {
-      name : 'Events' , 
-      link : '/events'
+      name: 'Events',
+      link: '/events'
     }
   ];
 
@@ -48,7 +48,7 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <div className="" onClick={()=>window.open('https://www.patreon.com/garvitpriyansh?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink' ,'_blank')}>
+            <div className="" onClick={() => window.open('https://www.patreon.com/garvitpriyansh?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink', '_blank')}>
               <NavbarButton variant="secondary">Inner Circle</NavbarButton>
             </div>
             <NavbarButton variant="primary" href={'https://forms.gle/1t2aErfkLNEySDPUA'}>Book a call</NavbarButton>
@@ -75,13 +75,13 @@ export function NavbarDemo() {
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
-                onClick={() => {setIsMobileMenuOpen(false) ; window.open('https://www.patreon.com/garvitpriyansh?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink' ,'_blank') }}
+                onClick={() => { setIsMobileMenuOpen(false); window.open('https://www.patreon.com/garvitpriyansh?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink', '_blank') }}
                 variant="primary"
                 className="w-full">
                 Inner Circle
               </NavbarButton>
               <NavbarButton
-              href={'https://forms.gle/1t2aErfkLNEySDPUA'}
+                href={'https://forms.gle/1t2aErfkLNEySDPUA'}
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full">
